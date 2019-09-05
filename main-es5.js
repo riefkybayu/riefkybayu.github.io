@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<app-landing></app-landing>\n<router-outlet></router-outlet>\n"
+module.exports = "<app-navbar></app-navbar>\n<app-landing></app-landing>\n<app-project></app-project>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div id=\"carouselExampleControls\" class=\"carousel slide\" d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"landing-page d-flex\">\r\n\t<div class=\"container text-center my-auto cus-max-width\" id=\"about\">\r\n\t\t<img src=\"../../assets/img/carousel/mypic200slaced.jpg\" class=\"cus-gambar margin-bot-1\">\r\n\t\t<h1 class=\"h1 text-secondary margin-bot-1 font-weight-bold cus-shadow\">Who is Riefky Bayu</h1>\r\n\t\t<p class=\"h5 text-secondary margin-bot-2 font-italic cus-shadow\">Get to know an anspiring software devoloper with this portofolio</p>\r\n\t</div>\r\n</header>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n<h1>TEST</h1>\r\n"
+module.exports = "<header class=\"landing-page d-flex snap-sini\" id=\"about-comp\">\r\n\t<div class=\"container text-center my-auto cus-max-width\" id=\"about\">\r\n\t\t<img src=\"../../assets/img/carousel/mypic200slaced.jpg\" class=\"cus-gambar margin-bot-1 gambarkeluar\" id=\"gambarku\">\r\n\t\t<h1 class=\"h1 text-secondary margin-bot-1 font-weight-bold cus-shadow\">About Me</h1>\r\n\t\t<p class=\"h5 text-secondary margin-bot-2 font-italic cus-shadow\">Born in Jakarta, I always have been interested in computer related stuff, started with networking as I picked Networking program for my vocational high school.\r\n\t\tThen started my learning programming at college, with pascal and java for my first procedural and object-oriented programming respectively. Since then I focus more on my Java as I created most of my projects with Java.\r\n\t\tAside from Java, I also mingled with Angular, Bootstrap, and Laravel as my interest in web development grows, although Im not as good with it as my Java, I understand their structure and how they worked </p>\r\n\t</div>\r\n</header>"
 
 /***/ }),
 
@@ -63,7 +63,18 @@ module.exports = "<header class=\"landing-page d-flex\">\r\n\t<div class=\"conta
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top jarak-before justify-content-between\" id=\"navbar_top\">\n        <a class=\"navbar-brand\" href=\"#\">My Portofolio</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\n          <ul class=\"navbar-nav ml-auto\">\n            <li class=\"nav-item active\">\n              <a class=\"nav-link\" href=\"#about\">About <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Projects</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Skills</a>\n            </li>\n\t\t\t<li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Contact</a>\n            </li>\n          </ul>\n        </div>\n</nav>\n<script>\n\t$(window).on( \"scroll\", function() {\n        $('#navbar_top').removeClass('bg-transparent');\n        $('#navbar_top').addClass('bg-dark');\n    });\n</script>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top jarak-before justify-content-between\" id=\"navbar_top\">\n        <a class=\"navbar-brand\" href=\"#\">My Portofolio</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\n          <ul class=\"navbar-nav ml-auto smooth-scroll\">\n            <li class=\"nav-item active\">\n              <a class=\"nav-link active\" href=\"#about-comp\" >About <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link active\" href=\"#project-comp\" >Projects</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Skills</a>\n            </li>\n\t\t\t<li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Contact</a>\n            </li>\n          </ul>\n        </div>\n</nav>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/project/project.component.html":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/project/project.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"landing-page border-top border-secondary pb-5\" id=\"project-comp\">\n\t<h1 class=\"h1 text-center pt-5 pb-3 cus-shadow\">My Project</h1>\n\t<div class=\"card-deck mr-2 ml-2\">\n\t  <div *ngFor=\"let project of projects\" class=\"card border-2 border-danger\">\n\t    <img class=\"card-img-top\" src=\"{{project.gambar}}\" alt=\"Card image cap\">\n\t    <div class=\"card-body\">\n\t      <h5 class=\"card-title text-center mb-3\">{{project.name}}</h5>\n\t      <p class=\"card-text mt-3\">{{project.deskripsi}}</p>\n\t\t  <a href=\"{{project.gitlink}}\">\n\t\t  <p class=\"text-center\"><img src=\"../../assets//img//project//github-logo_32.png\"></p></a>\n\t      <p class=\"card-text mt-4\"><small class=\"text-muted\">Skill yang digunakan : <br><code>{{project.skill}} </code></small></p>\n\t    </div>\n\t  </div>\n\t</div>\n</div>\n"
 
 /***/ }),
 
@@ -133,12 +144,12 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.dothis = function () {
         this.$lokasi = $(window).scrollTop();
-        if (((this.$lokasi) >= 600) && (this.$tigger_nav) == 0) {
+        if (((this.$lokasi) >= 500) && (this.$tigger_nav) == 0) {
             $('#navbar_top').removeClass('jarak-before');
             $('#navbar_top').addClass('berubah');
             this.$tigger_nav = 1;
         }
-        if (((this.$lokasi) < 600) && (this.$tigger_nav) == 1) {
+        if (((this.$lokasi) < 500) && (this.$tigger_nav) == 1) {
             $('#navbar_top').removeClass('berubah');
             ;
             $('#navbar_top').addClass('jarak-before');
@@ -180,6 +191,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./navbar/navbar.component */ "./src/app/navbar/navbar.component.ts");
 /* harmony import */ var _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./carousel/carousel.component */ "./src/app/carousel/carousel.component.ts");
 /* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
+/* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
+
 
 
 
@@ -197,11 +210,12 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                 _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_5__["NavbarComponent"],
                 _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__["CarouselComponent"],
-                _landing_landing_component__WEBPACK_IMPORTED_MODULE_7__["LandingComponent"]
+                _landing_landing_component__WEBPACK_IMPORTED_MODULE_7__["LandingComponent"],
+                _project_project_component__WEBPACK_IMPORTED_MODULE_8__["ProjectComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -265,7 +279,7 @@ var CarouselComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".landing-page {\r\n  height: 100%;\r\n  background-image: url('nightsky.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.margin-bot-1{\r\n\tmargin-bottom: 1rem!important;\r\n}\r\n.margin-bot-2{\r\n\tmargin-bottom: 3rem!important;\r\n}\r\n.cus-position-text{\r\n\tmax-width:600px;\r\n}\r\n.cus-shadow{\r\n    text-shadow: #000 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-gambar{\r\n    border-radius: 5.05rem!important;\r\n    border-top-left-radius: 5.05rem !important;\r\n    border-top-right-radius: 5.05rem !important;\r\n    border-bottom-right-radius: 5.05rem !important;\r\n    border-bottom-left-radius: 5.05rem !important;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1oscUNBQStEO0VBQy9ELDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIsc0JBQXNCO0FBQ3hCO0FBQ0E7Q0FDQyw2QkFBNkI7QUFDOUI7QUFDQTtDQUNDLDZCQUE2QjtBQUM5QjtBQUNBO0NBQ0MsZUFBZTtBQUNoQjtBQUNBO0lBQ0ksNkJBQTZCO0lBQzdCLG1DQUFtQztBQUN2QztBQUNBO0lBQ0ksZ0NBQWdDO0lBQ2hDLDBDQUEwQztJQUMxQywyQ0FBMkM7SUFDM0MsOENBQThDO0lBQzlDLDZDQUE2QztBQUNqRCIsImZpbGUiOiJzcmMvYXBwL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxhbmRpbmctcGFnZSB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy9pbWcvY2Fyb3VzZWwvbmlnaHRza3kuanBnXCIpO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuLm1hcmdpbi1ib3QtMXtcclxuXHRtYXJnaW4tYm90dG9tOiAxcmVtIWltcG9ydGFudDtcclxufVxyXG4ubWFyZ2luLWJvdC0ye1xyXG5cdG1hcmdpbi1ib3R0b206IDNyZW0haW1wb3J0YW50O1xyXG59XHJcbi5jdXMtcG9zaXRpb24tdGV4dHtcclxuXHRtYXgtd2lkdGg6NjAwcHg7XHJcbn1cclxuLmN1cy1zaGFkb3d7XHJcbiAgICB0ZXh0LXNoYWRvdzogIzAwMCAxcHggMXB4IDJweDtcclxuICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG59XHJcbi5jdXMtZ2FtYmFye1xyXG4gICAgYm9yZGVyLXJhZGl1czogNS4wNXJlbSFpbXBvcnRhbnQ7XHJcbiAgICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiA1LjA1cmVtICFpbXBvcnRhbnQ7XHJcbiAgICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogNS4wNXJlbSAhaW1wb3J0YW50O1xyXG4gICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDUuMDVyZW0gIWltcG9ydGFudDtcclxuICAgIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDUuMDVyZW0gIWltcG9ydGFudDtcclxufSJdfQ== */"
+module.exports = ".landing-page {\r\n  height: 100%;\r\n  background-image: url('nightsky.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.margin-bot-1{\r\n\tmargin-bottom: 1rem!important;\r\n}\r\n.margin-bot-2{\r\n\tmargin-bottom: 3rem!important;\r\n}\r\n.cus-position-text{\r\n\tmax-width:600px;\r\n}\r\n.cus-shadow{\r\n    text-shadow: #000 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-gambar{\r\n    border-radius: 5.05rem!important;\r\n    border-top-left-radius: 5.05rem !important;\r\n    border-top-right-radius: 5.05rem !important;\r\n    border-bottom-right-radius: 5.05rem !important;\r\n    border-bottom-left-radius: 5.05rem !important;\r\n\t-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */\r\n            animation: fadein 3s;\r\n}\r\np{\r\n\t-webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */\r\n            animation: fadein 4s;\r\n}\r\n/*\r\n#about:hover #gambarku{\r\n\topacity:1;\r\n\ttransition: all 1s ease-in;\r\n}\r\n*/\r\n@keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}\r\n/* Firefox < 16 */\r\n/* Safari, Chrome and Opera > 12.1 */\r\n@-webkit-keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}\r\n/* Internet Explorer */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1oscUNBQStEO0VBQy9ELDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIsc0JBQXNCO0FBQ3hCO0FBQ0E7Q0FDQyw2QkFBNkI7QUFDOUI7QUFDQTtDQUNDLDZCQUE2QjtBQUM5QjtBQUNBO0NBQ0MsZUFBZTtBQUNoQjtBQUNBO0lBQ0ksNkJBQTZCO0lBQzdCLG1DQUFtQztBQUN2QztBQUNBO0lBQ0ksZ0NBQWdDO0lBQ2hDLDBDQUEwQztJQUMxQywyQ0FBMkM7SUFDM0MsOENBQThDO0lBQzlDLDZDQUE2QztDQUNoRCw0QkFBNEIsRUFBRSxvQ0FBb0MsRUFDakMsaUJBQWlCLEVBQ2pCLHNCQUFzQixFQUN0QixpQkFBaUI7WUFDdkMsb0JBQW9CO0FBQ2hDO0FBQ0E7Q0FDQyw0QkFBNEIsRUFBRSxvQ0FBb0MsRUFDakMsaUJBQWlCLEVBQ2pCLHNCQUFzQixFQUN0QixpQkFBaUI7WUFDdkMsb0JBQW9CO0FBQ2hDO0FBQ0E7Ozs7O0NBS0M7QUFDRDtJQUNJLE9BQU8sVUFBVSxFQUFFO0lBQ25CLE9BQU8sVUFBVSxFQUFFO0FBQ3ZCO0FBRUEsaUJBQWlCO0FBTWpCLG9DQUFvQztBQUNwQztJQUNJLE9BQU8sVUFBVSxFQUFFO0lBQ25CLE9BQU8sVUFBVSxFQUFFO0FBQ3ZCO0FBRUEsc0JBQXNCIiwiZmlsZSI6InNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGFuZGluZy1wYWdlIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzL2ltZy9jYXJvdXNlbC9uaWdodHNreS5qcGdcIik7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxufVxyXG4ubWFyZ2luLWJvdC0xe1xyXG5cdG1hcmdpbi1ib3R0b206IDFyZW0haW1wb3J0YW50O1xyXG59XHJcbi5tYXJnaW4tYm90LTJ7XHJcblx0bWFyZ2luLWJvdHRvbTogM3JlbSFpbXBvcnRhbnQ7XHJcbn1cclxuLmN1cy1wb3NpdGlvbi10ZXh0e1xyXG5cdG1heC13aWR0aDo2MDBweDtcclxufVxyXG4uY3VzLXNoYWRvd3tcclxuICAgIHRleHQtc2hhZG93OiAjMDAwIDFweCAxcHggMnB4O1xyXG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbn1cclxuLmN1cy1nYW1iYXJ7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1LjA1cmVtIWltcG9ydGFudDtcclxuICAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDUuMDVyZW0gIWltcG9ydGFudDtcclxuICAgIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiA1LjA1cmVtICFpbXBvcnRhbnQ7XHJcbiAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogNS4wNXJlbSAhaW1wb3J0YW50O1xyXG4gICAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogNS4wNXJlbSAhaW1wb3J0YW50O1xyXG5cdC13ZWJraXQtYW5pbWF0aW9uOiBmYWRlaW4gM3M7IC8qIFNhZmFyaSwgQ2hyb21lIGFuZCBPcGVyYSA+IDEyLjEgKi9cclxuICAgICAgIC1tb3otYW5pbWF0aW9uOiBmYWRlaW4gM3M7IC8qIEZpcmVmb3ggPCAxNiAqL1xyXG4gICAgICAgIC1tcy1hbmltYXRpb246IGZhZGVpbiAzczsgLyogSW50ZXJuZXQgRXhwbG9yZXIgKi9cclxuICAgICAgICAgLW8tYW5pbWF0aW9uOiBmYWRlaW4gM3M7IC8qIE9wZXJhIDwgMTIuMSAqL1xyXG4gICAgICAgICAgICBhbmltYXRpb246IGZhZGVpbiAzcztcclxufVxyXG5we1xyXG5cdC13ZWJraXQtYW5pbWF0aW9uOiBmYWRlaW4gNHM7IC8qIFNhZmFyaSwgQ2hyb21lIGFuZCBPcGVyYSA+IDEyLjEgKi9cclxuICAgICAgIC1tb3otYW5pbWF0aW9uOiBmYWRlaW4gNHM7IC8qIEZpcmVmb3ggPCAxNiAqL1xyXG4gICAgICAgIC1tcy1hbmltYXRpb246IGZhZGVpbiA0czsgLyogSW50ZXJuZXQgRXhwbG9yZXIgKi9cclxuICAgICAgICAgLW8tYW5pbWF0aW9uOiBmYWRlaW4gNHM7IC8qIE9wZXJhIDwgMTIuMSAqL1xyXG4gICAgICAgICAgICBhbmltYXRpb246IGZhZGVpbiA0cztcclxufVxyXG4vKlxyXG4jYWJvdXQ6aG92ZXIgI2dhbWJhcmt1e1xyXG5cdG9wYWNpdHk6MTtcclxuXHR0cmFuc2l0aW9uOiBhbGwgMXMgZWFzZS1pbjtcclxufVxyXG4qL1xyXG5Aa2V5ZnJhbWVzIGZhZGVpbiB7XHJcbiAgICBmcm9tIHsgb3BhY2l0eTogMDsgfVxyXG4gICAgdG8gICB7IG9wYWNpdHk6IDE7IH1cclxufVxyXG5cclxuLyogRmlyZWZveCA8IDE2ICovXHJcbkAtbW96LWtleWZyYW1lcyBmYWRlaW4ge1xyXG4gICAgZnJvbSB7IG9wYWNpdHk6IDA7IH1cclxuICAgIHRvICAgeyBvcGFjaXR5OiAxOyB9XHJcbn1cclxuXHJcbi8qIFNhZmFyaSwgQ2hyb21lIGFuZCBPcGVyYSA+IDEyLjEgKi9cclxuQC13ZWJraXQta2V5ZnJhbWVzIGZhZGVpbiB7XHJcbiAgICBmcm9tIHsgb3BhY2l0eTogMDsgfVxyXG4gICAgdG8gICB7IG9wYWNpdHk6IDE7IH1cclxufVxyXG5cclxuLyogSW50ZXJuZXQgRXhwbG9yZXIgKi9cclxuQC1tcy1rZXlmcmFtZXMgZmFkZWluIHtcclxuICAgIGZyb20geyBvcGFjaXR5OiAwOyB9XHJcbiAgICB0byAgIHsgb3BhY2l0eTogMTsgfVxyXG59Il19 */"
 
 /***/ }),
 
@@ -309,7 +323,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".jarak-before{\r\n    top: 10px;\r\n\tright: 20px;\r\n\tleft: 20px;\r\n\tpadding-top:40px;\r\n\tpadding-left:70px;\r\n\tpadding-right:70px;\r\n\tpadding-bottom:40px;\r\n\tbackground-color: transparent;\r\n\ttransition: ease-in 1s;\r\n}\r\n.fixed-top.scrolled{\r\n\tposition: -webkit-sticky;\r\n\tposition: sticky;\r\n    top: 0!important;\r\n    right: 0!important;\r\n    left: 0!important;\r\n    z-index: 1030;\r\n}\r\n.custom-turun{\r\n    background: rgb(0, 0, 0);\r\n}\r\n.berubah{\r\n\ttop:0px;\r\n\tright:0px;\r\n\tleft:0px;\r\n\tpadding-left: 40px;\r\n\tpadding-right: 40px;\r\n\tpadding-top:15px;\r\n\tpadding-bottom:15px;\r\n\tbackground-color:#343a40;\r\n\ttransition:ease-out 1s;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksU0FBUztDQUNaLFdBQVc7Q0FDWCxVQUFVO0NBQ1YsZ0JBQWdCO0NBQ2hCLGlCQUFpQjtDQUNqQixrQkFBa0I7Q0FDbEIsbUJBQW1CO0NBQ25CLDZCQUE2QjtDQUM3QixzQkFBc0I7QUFDdkI7QUFDQTtDQUNDLHdCQUFnQjtDQUFoQixnQkFBZ0I7SUFDYixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQixhQUFhO0FBQ2pCO0FBQ0E7SUFDSSx3QkFBd0I7QUFDNUI7QUFDQTtDQUNDLE9BQU87Q0FDUCxTQUFTO0NBQ1QsUUFBUTtDQUNSLGtCQUFrQjtDQUNsQixtQkFBbUI7Q0FDbkIsZ0JBQWdCO0NBQ2hCLG1CQUFtQjtDQUNuQix3QkFBd0I7Q0FDeEIsc0JBQXNCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmphcmFrLWJlZm9yZXtcclxuICAgIHRvcDogMTBweDtcclxuXHRyaWdodDogMjBweDtcclxuXHRsZWZ0OiAyMHB4O1xyXG5cdHBhZGRpbmctdG9wOjQwcHg7XHJcblx0cGFkZGluZy1sZWZ0OjcwcHg7XHJcblx0cGFkZGluZy1yaWdodDo3MHB4O1xyXG5cdHBhZGRpbmctYm90dG9tOjQwcHg7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcblx0dHJhbnNpdGlvbjogZWFzZS1pbiAxcztcclxufVxyXG4uZml4ZWQtdG9wLnNjcm9sbGVke1xyXG5cdHBvc2l0aW9uOiBzdGlja3k7XHJcbiAgICB0b3A6IDAhaW1wb3J0YW50O1xyXG4gICAgcmlnaHQ6IDAhaW1wb3J0YW50O1xyXG4gICAgbGVmdDogMCFpbXBvcnRhbnQ7XHJcbiAgICB6LWluZGV4OiAxMDMwO1xyXG59XHJcbi5jdXN0b20tdHVydW57XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2IoMCwgMCwgMCk7XHJcbn1cclxuLmJlcnViYWh7XHJcblx0dG9wOjBweDtcclxuXHRyaWdodDowcHg7XHJcblx0bGVmdDowcHg7XHJcblx0cGFkZGluZy1sZWZ0OiA0MHB4O1xyXG5cdHBhZGRpbmctcmlnaHQ6IDQwcHg7XHJcblx0cGFkZGluZy10b3A6MTVweDtcclxuXHRwYWRkaW5nLWJvdHRvbToxNXB4O1xyXG5cdGJhY2tncm91bmQtY29sb3I6IzM0M2E0MDtcclxuXHR0cmFuc2l0aW9uOmVhc2Utb3V0IDFzO1xyXG59Il19 */"
+module.exports = "@media only screen and (min-width: 768px) {\r\n  .jarak-before {\r\n    top: 10px;\r\n\tright: 20px;\r\n\tleft: 20px;\r\n\tpadding-top:40px;\r\n\tpadding-left:70px;\r\n\tpadding-right:70px;\r\n\tpadding-bottom:40px;\r\n\tbackground-color: transparent;\r\n\ttransition: ease-in 1s;\r\n  }\r\n}\r\n@media only screen and (min-width: 100px) and (max-width: 767.98px) {\r\n  .jarak-before {\r\n    top: 10px;\r\n\tright: 10px;\r\n\tleft: 10px;\r\n\tpadding-top:10px;\r\n\tpadding-left:10px;\r\n\tpadding-right:10px;\r\n\tpadding-bottom:10px;\r\n\tbackground-color: transparent;\r\n\ttransition: all ease-in 1s!important;\r\n\t-moz-transition: all ease-in 1s;\r\n\t-o-transition: all ease-in 1s;\r\n\t-webkit-transition: all ease-in 1s;\r\n  }\r\n}\r\n.fixed-top.scrolled{\r\n\tposition: -webkit-sticky;\r\n\tposition: sticky;\r\n    top: 0!important;\r\n    right: 0!important;\r\n    left: 0!important;\r\n    z-index: 1030;\r\n}\r\n.custom-turun{\r\n    background: rgb(0, 0, 0);\r\n}\r\n.berubah{\r\n\ttop:0px;\r\n\tright:0px;\r\n\tleft:0px;\r\n\tpadding-left: 40px;\r\n\tpadding-right: 40px;\r\n\tpadding-top:15px;\r\n\tpadding-bottom:15px;\r\n\tbackground-color:#343a40;\r\n\ttransition:ease-out 1s;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7SUFDRSxTQUFTO0NBQ1osV0FBVztDQUNYLFVBQVU7Q0FDVixnQkFBZ0I7Q0FDaEIsaUJBQWlCO0NBQ2pCLGtCQUFrQjtDQUNsQixtQkFBbUI7Q0FDbkIsNkJBQTZCO0NBQzdCLHNCQUFzQjtFQUNyQjtBQUNGO0FBQ0E7RUFDRTtJQUNFLFNBQVM7Q0FDWixXQUFXO0NBQ1gsVUFBVTtDQUNWLGdCQUFnQjtDQUNoQixpQkFBaUI7Q0FDakIsa0JBQWtCO0NBQ2xCLG1CQUFtQjtDQUNuQiw2QkFBNkI7Q0FDN0Isb0NBQW9DO0NBQ3BDLCtCQUErQjtDQUMvQiw2QkFBNkI7Q0FDN0Isa0NBQWtDO0VBQ2pDO0FBQ0Y7QUFDQTtDQUNDLHdCQUFnQjtDQUFoQixnQkFBZ0I7SUFDYixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQixhQUFhO0FBQ2pCO0FBQ0E7SUFDSSx3QkFBd0I7QUFDNUI7QUFDQTtDQUNDLE9BQU87Q0FDUCxTQUFTO0NBQ1QsUUFBUTtDQUNSLGtCQUFrQjtDQUNsQixtQkFBbUI7Q0FDbkIsZ0JBQWdCO0NBQ2hCLG1CQUFtQjtDQUNuQix3QkFBd0I7Q0FDeEIsc0JBQXNCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIC5qYXJhay1iZWZvcmUge1xyXG4gICAgdG9wOiAxMHB4O1xyXG5cdHJpZ2h0OiAyMHB4O1xyXG5cdGxlZnQ6IDIwcHg7XHJcblx0cGFkZGluZy10b3A6NDBweDtcclxuXHRwYWRkaW5nLWxlZnQ6NzBweDtcclxuXHRwYWRkaW5nLXJpZ2h0OjcwcHg7XHJcblx0cGFkZGluZy1ib3R0b206NDBweDtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuXHR0cmFuc2l0aW9uOiBlYXNlLWluIDFzO1xyXG4gIH1cclxufVxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDEwMHB4KSBhbmQgKG1heC13aWR0aDogNzY3Ljk4cHgpIHtcclxuICAuamFyYWstYmVmb3JlIHtcclxuICAgIHRvcDogMTBweDtcclxuXHRyaWdodDogMTBweDtcclxuXHRsZWZ0OiAxMHB4O1xyXG5cdHBhZGRpbmctdG9wOjEwcHg7XHJcblx0cGFkZGluZy1sZWZ0OjEwcHg7XHJcblx0cGFkZGluZy1yaWdodDoxMHB4O1xyXG5cdHBhZGRpbmctYm90dG9tOjEwcHg7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcblx0dHJhbnNpdGlvbjogYWxsIGVhc2UtaW4gMXMhaW1wb3J0YW50O1xyXG5cdC1tb3otdHJhbnNpdGlvbjogYWxsIGVhc2UtaW4gMXM7XHJcblx0LW8tdHJhbnNpdGlvbjogYWxsIGVhc2UtaW4gMXM7XHJcblx0LXdlYmtpdC10cmFuc2l0aW9uOiBhbGwgZWFzZS1pbiAxcztcclxuICB9XHJcbn1cclxuLmZpeGVkLXRvcC5zY3JvbGxlZHtcclxuXHRwb3NpdGlvbjogc3RpY2t5O1xyXG4gICAgdG9wOiAwIWltcG9ydGFudDtcclxuICAgIHJpZ2h0OiAwIWltcG9ydGFudDtcclxuICAgIGxlZnQ6IDAhaW1wb3J0YW50O1xyXG4gICAgei1pbmRleDogMTAzMDtcclxufVxyXG4uY3VzdG9tLXR1cnVue1xyXG4gICAgYmFja2dyb3VuZDogcmdiKDAsIDAsIDApO1xyXG59XHJcbi5iZXJ1YmFoe1xyXG5cdHRvcDowcHg7XHJcblx0cmlnaHQ6MHB4O1xyXG5cdGxlZnQ6MHB4O1xyXG5cdHBhZGRpbmctbGVmdDogNDBweDtcclxuXHRwYWRkaW5nLXJpZ2h0OiA0MHB4O1xyXG5cdHBhZGRpbmctdG9wOjE1cHg7XHJcblx0cGFkZGluZy1ib3R0b206MTVweDtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiMzNDNhNDA7XHJcblx0dHJhbnNpdGlvbjplYXNlLW91dCAxcztcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -343,6 +357,72 @@ var NavbarComponent = /** @class */ (function () {
         })
     ], NavbarComponent);
     return NavbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/project-list.ts":
+/*!*********************************!*\
+  !*** ./src/app/project-list.ts ***!
+  \*********************************/
+/*! exports provided: PROJECTS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PROJECTS", function() { return PROJECTS; });
+var PROJECTS = [
+    { id: 1, name: 'Program Bengkel Kendali Motor', deskripsi: 'Program dibuat untuk bengkel yang berfungsi untuk penyetokan barang, transaksi, dan pelaporan(keuntungan dan ketersediaan).', gambar: '../assets/img/project/prog_bengkel.jpg', skill: ['Java', 'Netbeans', 'Jasper Report', 'MariaDB'], gitlink: 'https://github.com/riefkybayu/kendali_motor_bengkel_system' },
+    { id: 2, name: 'Aplikasi Penerimaan Siswa Baru SMP 1 PGRI Ciputat', deskripsi: 'Aplikasi berfungsi untuk mengatur penerimaan siswa baru, beserta pendataan pembayaran dan pemberian aksesoris sekolah', gambar: '../assets/img/project/prog_smp.jpg', skill: ['Java', 'Netbeans', 'Jasper Report', 'MariaDB'], gitlink: 'https://github.com/riefkybayu/PenerimaanSiswa' },
+    { id: 3, name: 'My Portofolio', deskripsi: 'SinglePage Application yang dibuat untuk melampirkan data pribadi khususnya kemampuan dan projek yang dibuat.', gambar: '../assets/img/project/prog_porto.jpg', skill: ['HTML', 'CSS', 'Javascript', 'Jquery', 'AngularJS', 'Bootstrap'], gitlink: 'https://github.com/riefkybayu/riefkybayu.github.io' },
+];
+
+
+/***/ }),
+
+/***/ "./src/app/project/project.component.css":
+/*!***********************************************!*\
+  !*** ./src/app/project/project.component.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".landing-page {\r\n  background-image: url('techback.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.cus-shadow{\r\n    text-shadow: rgb(255, 255, 255) 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvamVjdC9wcm9qZWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxxQ0FBa0U7RUFDbEUsMkJBQTJCO0VBQzNCLDRCQUE0QjtFQUM1QixzQkFBc0I7QUFDeEI7QUFDQTtJQUNJLDJDQUEyQztJQUMzQyxtQ0FBbUM7QUFDdkMiLCJmaWxlIjoic3JjL2FwcC9wcm9qZWN0L3Byb2plY3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sYW5kaW5nLXBhZ2Uge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy8vaW1nLy9jYXJvdXNlbC8vdGVjaGJhY2suanBnXCIpO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuLmN1cy1zaGFkb3d7XHJcbiAgICB0ZXh0LXNoYWRvdzogcmdiKDI1NSwgMjU1LCAyNTUpIDFweCAxcHggMnB4O1xyXG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbn1cclxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/project/project.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/project/project.component.ts ***!
+  \**********************************************/
+/*! exports provided: ProjectComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectComponent", function() { return ProjectComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_project_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../app/project-list */ "./src/app/project-list.ts");
+
+
+
+var ProjectComponent = /** @class */ (function () {
+    function ProjectComponent() {
+        this.projects = _app_project_list__WEBPACK_IMPORTED_MODULE_2__["PROJECTS"];
+    }
+    ProjectComponent.prototype.ngOnInit = function () {
+    };
+    ProjectComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-project',
+            template: __webpack_require__(/*! raw-loader!./project.component.html */ "./node_modules/raw-loader/index.js!./src/app/project/project.component.html"),
+            styles: [__webpack_require__(/*! ./project.component.css */ "./src/app/project/project.component.css")]
+        })
+    ], ProjectComponent);
+    return ProjectComponent;
 }());
 
 
