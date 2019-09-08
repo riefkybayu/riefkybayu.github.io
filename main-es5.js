@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<app-landing></app-landing>\n<app-project></app-project>\n<router-outlet></router-outlet>\n"
+module.exports = "<app-navbar></app-navbar>\n<app-landing></app-landing>\n<app-project></app-project>\n<app-skill></app-skill>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div id=\"carouselExampleControls\" class=\"carousel slide\" d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"landing-page d-flex snap-sini\" id=\"about-comp\">\r\n\t<div class=\"container text-center my-auto cus-max-width\" id=\"about\">\r\n\t\t<img src=\"../../assets/img/carousel/mypic200slaced.jpg\" class=\"cus-gambar margin-bot-1 gambarkeluar\" id=\"gambarku\">\r\n\t\t<h1 class=\"h1 text-secondary margin-bot-1 font-weight-bold cus-shadow\">About Me</h1>\r\n\t\t<p class=\"h5 text-secondary margin-bot-2 font-italic cus-shadow\">Born in Jakarta, I always have been interested in computer related stuff, started with networking as I picked Networking program for my vocational high school.\r\n\t\tThen started my learning programming at college, with pascal and java for my first procedural and object-oriented programming respectively. Since then I focus more on my Java as I created most of my projects with Java.\r\n\t\tAside from Java, I also mingled with Angular, Bootstrap, and Laravel as my interest in web development grows, although Im not as good with it as my Java, I understand their structure and how they worked </p>\r\n\t</div>\r\n</header>"
+module.exports = "<header class=\"landing-page d-flex snap-sini border-bottom border-secondary\" id=\"about-comp\">\r\n\t<div class=\"container text-center my-auto cus-max-width\" id=\"about\">\r\n\t\t<img src=\"../../assets/img/carousel/mypic200slaced.jpg\" class=\"cus-gambar margin-bot-1 gambarkeluar\" id=\"gambarku\">\r\n\t\t<h1 class=\"h1 text-secondary margin-bot-1 font-weight-bold cus-shadow\">About Me</h1>\r\n\t\t<p class=\"h5 text-secondary margin-bot-2 font-italic cus-shadow\">I have always been interested in computer related stuff, started with networking at high school then focusing more on programming at college.\r\n\t\tMy favorite programming language is java as it was my first OOP.</p>\r\n\t</div>\r\n</header>\r\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<header class=\"landing-page d-flex snap-sini\" id=\"about-com
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top jarak-before justify-content-between\" id=\"navbar_top\">\n        <a class=\"navbar-brand\" href=\"#\">My Portofolio</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\n          <ul class=\"navbar-nav ml-auto smooth-scroll\">\n            <li class=\"nav-item active\">\n              <a class=\"nav-link active\" href=\"#about-comp\" >About <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link active\" href=\"#project-comp\" >Projects</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Skills</a>\n            </li>\n\t\t\t<li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Contact</a>\n            </li>\n          </ul>\n        </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top jarak-before justify-content-between\" id=\"navbar_top\">\n        <a class=\"navbar-brand\" href=\"#\">My Portofolio</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\n          <ul class=\"navbar-nav ml-auto smooth-scroll\">\n            <li class=\"nav-item active\">\n              <a class=\"nav-link active\" href=\"#about-comp\" >About <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link active\" href=\"#project-comp\" >Projects</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link active\" href=\"#skill-comp\">Skills</a>\n            </li>\n\t\t\t<li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Contact</a>\n            </li>\n          </ul>\n        </div>\n</nav>"
 
 /***/ }),
 
@@ -74,7 +74,18 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top jar
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-page border-top border-secondary pb-5\" id=\"project-comp\">\n\t<h1 class=\"h1 text-center pt-5 pb-3 cus-shadow\">My Project</h1>\n\t<div class=\"card-deck mr-2 ml-2\">\n\t  <div *ngFor=\"let project of projects\" class=\"card border-2 border-danger\">\n\t    <img class=\"card-img-top\" src=\"{{project.gambar}}\" alt=\"Card image cap\">\n\t    <div class=\"card-body\">\n\t      <h5 class=\"card-title text-center mb-3\">{{project.name}}</h5>\n\t      <p class=\"card-text mt-3\">{{project.deskripsi}}</p>\n\t\t  <a href=\"{{project.gitlink}}\">\n\t\t  <p class=\"text-center\"><img src=\"../../assets//img//project//github-logo_32.png\"></p></a>\n\t      <p class=\"card-text mt-4\"><small class=\"text-muted\">Skill yang digunakan : <br><code>{{project.skill}} </code></small></p>\n\t    </div>\n\t  </div>\n\t</div>\n</div>\n"
+module.exports = "<div class=\"landing-page border-top border-bottom border-secondary pt-5 pb-5 \" id=\"project-comp\">\n\t<h1 class=\"h1 text-center pt-5 pb-3 cus-shadow\">My Project</h1>\n\t<div class=\"card-deck mr-4 ml-5 box-wrap \">\n\t  <div *ngFor=\"let project of projects\" class=\"card border-2 border-primary box\" id=\"kembali\">\n\t    <img class=\"card-img-top\" src=\"{{project.gambar}}\" alt=\"Card image cap\">\n\t    <div class=\"card-body\">\n\t      <h5 class=\"card-title text-center mb-3\">{{project.name}}</h5>\n\t      <p class=\"card-text mt-3\">{{project.deskripsi}}</p>\n\t\t  <a href=\"{{project.gitlink}}\">\n\t\t  <p class=\"text-center mt-4\"><img src=\"../../assets//img//project//github-logo_32.png\"></p></a>\n\t      <p class=\"card-text mt-2 fixed-bottom\"><small class=\"text-muted\">Skill yang digunakan : <br><code>{{project.skill}} </code></small></p>\n\t    </div>\n\t  </div>\n\t</div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/skill/skill.component.html":
+/*!**********************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/skill/skill.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"landing-page pb-5 border-top border-bottom border-secondary text-center\" id=\"skill-comp\">\r\n\t<h1 class=\"h1 pt-5 pb-3 cus-shadow\"> My Skills</h1>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 cus-text-background border border-secondary\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let web of webs\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{web.name}}\">{{web.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let web of webs\" data-target=\"#list-example\">\r\n\t\t\t  <a id=\"list-item-{{web.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{web.name}}</h3></a>\r\n\t\t\t  <img src=\"{{web.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{web.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -192,6 +203,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./carousel/carousel.component */ "./src/app/carousel/carousel.component.ts");
 /* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
 /* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
+/* harmony import */ var _skill_skill_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./skill/skill.component */ "./src/app/skill/skill.component.ts");
+
 
 
 
@@ -212,6 +225,7 @@ var AppModule = /** @class */ (function () {
                 _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__["CarouselComponent"],
                 _landing_landing_component__WEBPACK_IMPORTED_MODULE_7__["LandingComponent"],
                 _project_project_component__WEBPACK_IMPORTED_MODULE_8__["ProjectComponent"],
+                _skill_skill_component__WEBPACK_IMPORTED_MODULE_9__["SkillComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -279,7 +293,7 @@ var CarouselComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".landing-page {\r\n  height: 100%;\r\n  background-image: url('nightsky.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.margin-bot-1{\r\n\tmargin-bottom: 1rem!important;\r\n}\r\n.margin-bot-2{\r\n\tmargin-bottom: 3rem!important;\r\n}\r\n.cus-position-text{\r\n\tmax-width:600px;\r\n}\r\n.cus-shadow{\r\n    text-shadow: #000 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-gambar{\r\n    border-radius: 5.05rem!important;\r\n    border-top-left-radius: 5.05rem !important;\r\n    border-top-right-radius: 5.05rem !important;\r\n    border-bottom-right-radius: 5.05rem !important;\r\n    border-bottom-left-radius: 5.05rem !important;\r\n\t-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */\r\n            animation: fadein 3s;\r\n}\r\np{\r\n\t-webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */\r\n            animation: fadein 4s;\r\n}\r\n/*\r\n#about:hover #gambarku{\r\n\topacity:1;\r\n\ttransition: all 1s ease-in;\r\n}\r\n*/\r\n@keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}\r\n/* Firefox < 16 */\r\n/* Safari, Chrome and Opera > 12.1 */\r\n@-webkit-keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}\r\n/* Internet Explorer */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1oscUNBQStEO0VBQy9ELDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIsc0JBQXNCO0FBQ3hCO0FBQ0E7Q0FDQyw2QkFBNkI7QUFDOUI7QUFDQTtDQUNDLDZCQUE2QjtBQUM5QjtBQUNBO0NBQ0MsZUFBZTtBQUNoQjtBQUNBO0lBQ0ksNkJBQTZCO0lBQzdCLG1DQUFtQztBQUN2QztBQUNBO0lBQ0ksZ0NBQWdDO0lBQ2hDLDBDQUEwQztJQUMxQywyQ0FBMkM7SUFDM0MsOENBQThDO0lBQzlDLDZDQUE2QztDQUNoRCw0QkFBNEIsRUFBRSxvQ0FBb0MsRUFDakMsaUJBQWlCLEVBQ2pCLHNCQUFzQixFQUN0QixpQkFBaUI7WUFDdkMsb0JBQW9CO0FBQ2hDO0FBQ0E7Q0FDQyw0QkFBNEIsRUFBRSxvQ0FBb0MsRUFDakMsaUJBQWlCLEVBQ2pCLHNCQUFzQixFQUN0QixpQkFBaUI7WUFDdkMsb0JBQW9CO0FBQ2hDO0FBQ0E7Ozs7O0NBS0M7QUFDRDtJQUNJLE9BQU8sVUFBVSxFQUFFO0lBQ25CLE9BQU8sVUFBVSxFQUFFO0FBQ3ZCO0FBRUEsaUJBQWlCO0FBTWpCLG9DQUFvQztBQUNwQztJQUNJLE9BQU8sVUFBVSxFQUFFO0lBQ25CLE9BQU8sVUFBVSxFQUFFO0FBQ3ZCO0FBRUEsc0JBQXNCIiwiZmlsZSI6InNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGFuZGluZy1wYWdlIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzL2ltZy9jYXJvdXNlbC9uaWdodHNreS5qcGdcIik7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxufVxyXG4ubWFyZ2luLWJvdC0xe1xyXG5cdG1hcmdpbi1ib3R0b206IDFyZW0haW1wb3J0YW50O1xyXG59XHJcbi5tYXJnaW4tYm90LTJ7XHJcblx0bWFyZ2luLWJvdHRvbTogM3JlbSFpbXBvcnRhbnQ7XHJcbn1cclxuLmN1cy1wb3NpdGlvbi10ZXh0e1xyXG5cdG1heC13aWR0aDo2MDBweDtcclxufVxyXG4uY3VzLXNoYWRvd3tcclxuICAgIHRleHQtc2hhZG93OiAjMDAwIDFweCAxcHggMnB4O1xyXG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbn1cclxuLmN1cy1nYW1iYXJ7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1LjA1cmVtIWltcG9ydGFudDtcclxuICAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDUuMDVyZW0gIWltcG9ydGFudDtcclxuICAgIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiA1LjA1cmVtICFpbXBvcnRhbnQ7XHJcbiAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogNS4wNXJlbSAhaW1wb3J0YW50O1xyXG4gICAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogNS4wNXJlbSAhaW1wb3J0YW50O1xyXG5cdC13ZWJraXQtYW5pbWF0aW9uOiBmYWRlaW4gM3M7IC8qIFNhZmFyaSwgQ2hyb21lIGFuZCBPcGVyYSA+IDEyLjEgKi9cclxuICAgICAgIC1tb3otYW5pbWF0aW9uOiBmYWRlaW4gM3M7IC8qIEZpcmVmb3ggPCAxNiAqL1xyXG4gICAgICAgIC1tcy1hbmltYXRpb246IGZhZGVpbiAzczsgLyogSW50ZXJuZXQgRXhwbG9yZXIgKi9cclxuICAgICAgICAgLW8tYW5pbWF0aW9uOiBmYWRlaW4gM3M7IC8qIE9wZXJhIDwgMTIuMSAqL1xyXG4gICAgICAgICAgICBhbmltYXRpb246IGZhZGVpbiAzcztcclxufVxyXG5we1xyXG5cdC13ZWJraXQtYW5pbWF0aW9uOiBmYWRlaW4gNHM7IC8qIFNhZmFyaSwgQ2hyb21lIGFuZCBPcGVyYSA+IDEyLjEgKi9cclxuICAgICAgIC1tb3otYW5pbWF0aW9uOiBmYWRlaW4gNHM7IC8qIEZpcmVmb3ggPCAxNiAqL1xyXG4gICAgICAgIC1tcy1hbmltYXRpb246IGZhZGVpbiA0czsgLyogSW50ZXJuZXQgRXhwbG9yZXIgKi9cclxuICAgICAgICAgLW8tYW5pbWF0aW9uOiBmYWRlaW4gNHM7IC8qIE9wZXJhIDwgMTIuMSAqL1xyXG4gICAgICAgICAgICBhbmltYXRpb246IGZhZGVpbiA0cztcclxufVxyXG4vKlxyXG4jYWJvdXQ6aG92ZXIgI2dhbWJhcmt1e1xyXG5cdG9wYWNpdHk6MTtcclxuXHR0cmFuc2l0aW9uOiBhbGwgMXMgZWFzZS1pbjtcclxufVxyXG4qL1xyXG5Aa2V5ZnJhbWVzIGZhZGVpbiB7XHJcbiAgICBmcm9tIHsgb3BhY2l0eTogMDsgfVxyXG4gICAgdG8gICB7IG9wYWNpdHk6IDE7IH1cclxufVxyXG5cclxuLyogRmlyZWZveCA8IDE2ICovXHJcbkAtbW96LWtleWZyYW1lcyBmYWRlaW4ge1xyXG4gICAgZnJvbSB7IG9wYWNpdHk6IDA7IH1cclxuICAgIHRvICAgeyBvcGFjaXR5OiAxOyB9XHJcbn1cclxuXHJcbi8qIFNhZmFyaSwgQ2hyb21lIGFuZCBPcGVyYSA+IDEyLjEgKi9cclxuQC13ZWJraXQta2V5ZnJhbWVzIGZhZGVpbiB7XHJcbiAgICBmcm9tIHsgb3BhY2l0eTogMDsgfVxyXG4gICAgdG8gICB7IG9wYWNpdHk6IDE7IH1cclxufVxyXG5cclxuLyogSW50ZXJuZXQgRXhwbG9yZXIgKi9cclxuQC1tcy1rZXlmcmFtZXMgZmFkZWluIHtcclxuICAgIGZyb20geyBvcGFjaXR5OiAwOyB9XHJcbiAgICB0byAgIHsgb3BhY2l0eTogMTsgfVxyXG59Il19 */"
+module.exports = ".landing-page {\r\n  height: 100%;\r\n  background-image: url('nightsky.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.margin-bot-1{\r\n\tmargin-bottom: 1rem!important;\r\n}\r\n.margin-bot-2{\r\n\tmargin-bottom: 3rem!important;\r\n}\r\n.cus-position-text{\r\n\tmax-width:600px;\r\n}\r\n.cus-shadow{\r\n    text-shadow: #000 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-gambar{\r\n    border-radius: 5.05rem!important;\r\n    border-top-left-radius: 5.05rem !important;\r\n    border-top-right-radius: 5.05rem !important;\r\n    border-bottom-right-radius: 5.05rem !important;\r\n    border-bottom-left-radius: 5.05rem !important;\r\n\topacity: 0.2;\r\n\ttransition: all 1s ease-out\r\n\t\r\n}\r\np, h1{\r\n\topacity: 0.2;\r\n\ttransition: all 2s ease-out;\r\n}\r\n#about-comp:hover #gambarku{\r\n\topacity:1;\r\n\ttransition: all 1s ease-in;\r\n}\r\n#about-comp:hover h1{\r\n\topacity:1;\r\n\ttransition: all 1.5s ease-in;\r\n}\r\n#about-comp:hover p{\r\n\topacity:1;\r\n\ttransition: all 2s ease-in;\r\n}\r\n/*\r\n#about:hover #gambarku{\r\n\topacity:1;\r\n\ttransition: all 1s ease-in;\r\n}\r\n*/\r\n/*\r\n@keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}\r\n@-moz-keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}\r\n@-webkit-keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}/\r\n@-ms-keyframes fadein {\r\n    from { opacity: 0; }\r\n    to   { opacity: 1; }\r\n}\r\n*/\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1oscUNBQStEO0VBQy9ELDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIsc0JBQXNCO0FBQ3hCO0FBQ0E7Q0FDQyw2QkFBNkI7QUFDOUI7QUFDQTtDQUNDLDZCQUE2QjtBQUM5QjtBQUNBO0NBQ0MsZUFBZTtBQUNoQjtBQUNBO0lBQ0ksNkJBQTZCO0lBQzdCLG1DQUFtQztBQUN2QztBQUNBO0lBQ0ksZ0NBQWdDO0lBQ2hDLDBDQUEwQztJQUMxQywyQ0FBMkM7SUFDM0MsOENBQThDO0lBQzlDLDZDQUE2QztDQUNoRCxZQUFZO0NBQ1o7O0FBRUQ7QUFDQTtDQUNDLFlBQVk7Q0FDWiwyQkFBMkI7QUFDNUI7QUFFQTtDQUNDLFNBQVM7Q0FDVCwwQkFBMEI7QUFDM0I7QUFDQTtDQUNDLFNBQVM7Q0FDVCw0QkFBNEI7QUFDN0I7QUFDQTtDQUNDLFNBQVM7Q0FDVCwwQkFBMEI7QUFDM0I7QUFFQTs7Ozs7Q0FLQztBQUdEOzs7Ozs7Ozs7Ozs7Ozs7OztDQWlCQyIsImZpbGUiOiJzcmMvYXBwL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxhbmRpbmctcGFnZSB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy9pbWcvY2Fyb3VzZWwvbmlnaHRza3kuanBnXCIpO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuLm1hcmdpbi1ib3QtMXtcclxuXHRtYXJnaW4tYm90dG9tOiAxcmVtIWltcG9ydGFudDtcclxufVxyXG4ubWFyZ2luLWJvdC0ye1xyXG5cdG1hcmdpbi1ib3R0b206IDNyZW0haW1wb3J0YW50O1xyXG59XHJcbi5jdXMtcG9zaXRpb24tdGV4dHtcclxuXHRtYXgtd2lkdGg6NjAwcHg7XHJcbn1cclxuLmN1cy1zaGFkb3d7XHJcbiAgICB0ZXh0LXNoYWRvdzogIzAwMCAxcHggMXB4IDJweDtcclxuICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG59XHJcbi5jdXMtZ2FtYmFye1xyXG4gICAgYm9yZGVyLXJhZGl1czogNS4wNXJlbSFpbXBvcnRhbnQ7XHJcbiAgICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiA1LjA1cmVtICFpbXBvcnRhbnQ7XHJcbiAgICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogNS4wNXJlbSAhaW1wb3J0YW50O1xyXG4gICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDUuMDVyZW0gIWltcG9ydGFudDtcclxuICAgIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDUuMDVyZW0gIWltcG9ydGFudDtcclxuXHRvcGFjaXR5OiAwLjI7XHJcblx0dHJhbnNpdGlvbjogYWxsIDFzIGVhc2Utb3V0XHJcblx0XHJcbn1cclxucCwgaDF7XHJcblx0b3BhY2l0eTogMC4yO1xyXG5cdHRyYW5zaXRpb246IGFsbCAycyBlYXNlLW91dDtcclxufSBcclxuXHJcbiNhYm91dC1jb21wOmhvdmVyICNnYW1iYXJrdXtcclxuXHRvcGFjaXR5OjE7XHJcblx0dHJhbnNpdGlvbjogYWxsIDFzIGVhc2UtaW47XHJcbn1cclxuI2Fib3V0LWNvbXA6aG92ZXIgaDF7XHJcblx0b3BhY2l0eToxO1xyXG5cdHRyYW5zaXRpb246IGFsbCAxLjVzIGVhc2UtaW47XHJcbn1cclxuI2Fib3V0LWNvbXA6aG92ZXIgcHtcclxuXHRvcGFjaXR5OjE7XHJcblx0dHJhbnNpdGlvbjogYWxsIDJzIGVhc2UtaW47XHJcbn1cclxuXHJcbi8qXHJcbiNhYm91dDpob3ZlciAjZ2FtYmFya3V7XHJcblx0b3BhY2l0eToxO1xyXG5cdHRyYW5zaXRpb246IGFsbCAxcyBlYXNlLWluO1xyXG59XHJcbiovXHJcblxyXG5cclxuLypcclxuQGtleWZyYW1lcyBmYWRlaW4ge1xyXG4gICAgZnJvbSB7IG9wYWNpdHk6IDA7IH1cclxuICAgIHRvICAgeyBvcGFjaXR5OiAxOyB9XHJcbn1cclxuQC1tb3ota2V5ZnJhbWVzIGZhZGVpbiB7XHJcbiAgICBmcm9tIHsgb3BhY2l0eTogMDsgfVxyXG4gICAgdG8gICB7IG9wYWNpdHk6IDE7IH1cclxufVxyXG5ALXdlYmtpdC1rZXlmcmFtZXMgZmFkZWluIHtcclxuICAgIGZyb20geyBvcGFjaXR5OiAwOyB9XHJcbiAgICB0byAgIHsgb3BhY2l0eTogMTsgfVxyXG59L1xyXG5ALW1zLWtleWZyYW1lcyBmYWRlaW4ge1xyXG4gICAgZnJvbSB7IG9wYWNpdHk6IDA7IH1cclxuICAgIHRvICAgeyBvcGFjaXR5OiAxOyB9XHJcbn1cclxuKi8iXX0= */"
 
 /***/ }),
 
@@ -376,7 +390,7 @@ __webpack_require__.r(__webpack_exports__);
 var PROJECTS = [
     { id: 1, name: 'Program Bengkel Kendali Motor', deskripsi: 'Program dibuat untuk bengkel yang berfungsi untuk penyetokan barang, transaksi, dan pelaporan(keuntungan dan ketersediaan).', gambar: '../assets/img/project/prog_bengkel.jpg', skill: ['Java', 'Netbeans', 'Jasper Report', 'MariaDB'], gitlink: 'https://github.com/riefkybayu/kendali_motor_bengkel_system' },
     { id: 2, name: 'Aplikasi Penerimaan Siswa Baru SMP 1 PGRI Ciputat', deskripsi: 'Aplikasi berfungsi untuk mengatur penerimaan siswa baru, beserta pendataan pembayaran dan pemberian aksesoris sekolah', gambar: '../assets/img/project/prog_smp.jpg', skill: ['Java', 'Netbeans', 'Jasper Report', 'MariaDB'], gitlink: 'https://github.com/riefkybayu/PenerimaanSiswa' },
-    { id: 3, name: 'My Portofolio', deskripsi: 'SinglePage Application yang dibuat untuk melampirkan data pribadi khususnya kemampuan dan projek yang dibuat.', gambar: '../assets/img/project/prog_porto.jpg', skill: ['HTML', 'CSS', 'Javascript', 'Jquery', 'AngularJS', 'Bootstrap'], gitlink: 'https://github.com/riefkybayu/riefkybayu.github.io' },
+    { id: 3, name: 'My Portofolio', deskripsi: 'SinglePage Application yang dibuat untuk melampirkan data projek, skill, dan kontak.', gambar: '../assets/img/project/prog_porto.jpg', skill: ['HTML', 'CSS', 'Javascript', 'Jquery', 'AngularJS', 'Bootstrap'], gitlink: 'https://github.com/riefkybayu/riefkybayu.github.io' },
 ];
 
 
@@ -389,7 +403,7 @@ var PROJECTS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".landing-page {\r\n  background-image: url('techback.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.cus-shadow{\r\n    text-shadow: rgb(255, 255, 255) 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvamVjdC9wcm9qZWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxxQ0FBa0U7RUFDbEUsMkJBQTJCO0VBQzNCLDRCQUE0QjtFQUM1QixzQkFBc0I7QUFDeEI7QUFDQTtJQUNJLDJDQUEyQztJQUMzQyxtQ0FBbUM7QUFDdkMiLCJmaWxlIjoic3JjL2FwcC9wcm9qZWN0L3Byb2plY3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sYW5kaW5nLXBhZ2Uge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy8vaW1nLy9jYXJvdXNlbC8vdGVjaGJhY2suanBnXCIpO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuLmN1cy1zaGFkb3d7XHJcbiAgICB0ZXh0LXNoYWRvdzogcmdiKDI1NSwgMjU1LCAyNTUpIDFweCAxcHggMnB4O1xyXG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbn1cclxuIl19 */"
+module.exports = ".landing-page {\r\n  background-image: url('techback.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.cus-shadow{\r\n    text-shadow: rgb(255, 255, 255) 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n/*.ilang{\r\n\topacity:0;\r\n\ttransition:all 1s ease-out;\r\n}\r\n#project-comp:hover #kembali{\r\n\topacity:1;\r\n\ttransition: all 1s ease-in;\r\n}\r\n*/\r\n.box-wrap{\r\n\topacity:1;\r\n}\r\n.box{\r\n  box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);\r\n  transition:1s all; \r\n  opacity:.5;\r\n  -webkit-filter:blur(3px);\r\n          filter:blur(3px);\r\n}\r\n.box-wrap:hover .box{\r\n  -webkit-filter:blur(3px);\r\n          filter:blur(3px);\r\n  opacity:.5;\r\n  transform: scale(.98);\r\n  box-shadow:none;\r\n}\r\n.box-wrap:hover .box:hover{\r\n  transform:scale(1);\r\n  -webkit-filter:blur(0px);\r\n          filter:blur(0px);\r\n  opacity:1;\r\n  box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvamVjdC9wcm9qZWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxxQ0FBa0U7RUFDbEUsMkJBQTJCO0VBQzNCLDRCQUE0QjtFQUM1QixzQkFBc0I7QUFDeEI7QUFDQTtJQUNJLDJDQUEyQztJQUMzQyxtQ0FBbUM7QUFDdkM7QUFDQTs7Ozs7Ozs7Q0FRQztBQUNEO0NBQ0MsU0FBUztBQUNWO0FBQ0E7RUFDRSx5Q0FBeUM7RUFDekMsaUJBQWlCO0VBQ2pCLFVBQVU7RUFDVix3QkFBZ0I7VUFBaEIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSx3QkFBZ0I7VUFBaEIsZ0JBQWdCO0VBQ2hCLFVBQVU7RUFDVixxQkFBcUI7RUFDckIsZUFBZTtBQUNqQjtBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLHdCQUFnQjtVQUFoQixnQkFBZ0I7RUFDaEIsU0FBUztFQUNULDJDQUEyQztBQUM3QyIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3QvcHJvamVjdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxhbmRpbmctcGFnZSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzLy9pbWcvL2Nhcm91c2VsLy90ZWNoYmFjay5qcGdcIik7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxufVxyXG4uY3VzLXNoYWRvd3tcclxuICAgIHRleHQtc2hhZG93OiByZ2IoMjU1LCAyNTUsIDI1NSkgMXB4IDFweCAycHg7XHJcbiAgICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcclxufVxyXG4vKi5pbGFuZ3tcclxuXHRvcGFjaXR5OjA7XHJcblx0dHJhbnNpdGlvbjphbGwgMXMgZWFzZS1vdXQ7XHJcbn1cclxuI3Byb2plY3QtY29tcDpob3ZlciAja2VtYmFsaXtcclxuXHRvcGFjaXR5OjE7XHJcblx0dHJhbnNpdGlvbjogYWxsIDFzIGVhc2UtaW47XHJcbn1cclxuKi9cclxuLmJveC13cmFwe1xyXG5cdG9wYWNpdHk6MTtcclxufVxyXG4uYm94e1xyXG4gIGJveC1zaGFkb3c6MCAycHggM3B4IDBweCByZ2JhKDAsMCwwLDAuMjUpO1xyXG4gIHRyYW5zaXRpb246MXMgYWxsOyBcclxuICBvcGFjaXR5Oi41O1xyXG4gIGZpbHRlcjpibHVyKDNweCk7XHJcbn1cclxuLmJveC13cmFwOmhvdmVyIC5ib3h7XHJcbiAgZmlsdGVyOmJsdXIoM3B4KTtcclxuICBvcGFjaXR5Oi41O1xyXG4gIHRyYW5zZm9ybTogc2NhbGUoLjk4KTtcclxuICBib3gtc2hhZG93Om5vbmU7XHJcbn1cclxuLmJveC13cmFwOmhvdmVyIC5ib3g6aG92ZXJ7XHJcbiAgdHJhbnNmb3JtOnNjYWxlKDEpO1xyXG4gIGZpbHRlcjpibHVyKDBweCk7XHJcbiAgb3BhY2l0eToxO1xyXG4gIGJveC1zaGFkb3c6MCA4cHggMjBweCAwcHggcmdiYSgwLDAsMCwwLjEyNSk7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -423,6 +437,87 @@ var ProjectComponent = /** @class */ (function () {
         })
     ], ProjectComponent);
     return ProjectComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/skill-list.ts":
+/*!*******************************!*\
+  !*** ./src/app/skill-list.ts ***!
+  \*******************************/
+/*! exports provided: WEBS, PROGRAMS, COMPUTERS, GENERALS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WEBS", function() { return WEBS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PROGRAMS", function() { return PROGRAMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPUTERS", function() { return COMPUTERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GENERALS", function() { return GENERALS; });
+var WEBS = [
+    { id: 1, name: 'HTML', deskripsi: 'I have clear grasp of how it was structured. I understand how DOM events work and how to use it as well as how HTML works with CSS and Javascript/Jquery. ', gambar: '../assets/img/skilllogo/html5-small.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
+    { id: 2, name: 'CSS', deskripsi: 'I wont say i have full graps of css as it has so many properties, however I know general attributes, selectors, and how it works, at the very least i can make a decent page with it alone(plus html of course).', gambar: '../assets/img/skilllogo/css-small.png', tingkat_int: '90%', tingkat_str: 'Intermediate' },
+    { id: 3, name: 'JavaScript', deskripsi: 'Javascript is still kinda vague, I can manipulate static data with it, but I prefer to use Jquery to do most of the job, especially when it comes to events.', gambar: '../assets/img/skilllogo/javascript-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
+    { id: 4, name: 'Jquery', deskripsi: 'Same as Javascript, but at least i use Jquery more often than Javascript, doesnt mean i really get it thought, I can do some event function, or any other simple function, but nothing to advanced.', gambar: '../assets/img/skilllogo/jquery-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
+    { id: 5, name: 'Bootstrap', deskripsi: 'Bootstrap is probably what made me interested in web development. I mean, i did touch html, and css beforehand, but its so much of chore to do everything by myself. I havent use all it has to over, but the core concept like layout, and utilites are well understood. ', gambar: '../assets/img/skilllogo/bootstrap-small.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
+    { id: 6, name: 'Angular', deskripsi: 'Angular really makes things tiddy, i like it this way, no messy codes splattered all over the place. Easy routing, nice parent/child relation, good structure, easy to understand DI... just great to use, Im not expert at angular yet at the moment. Stuff like directives, lifecycle hooks, RxJS, and many more are still confusing to me.', gambar: '../assets/img/skilllogo/angular-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
+];
+var PROGRAMS = [
+    { id: 1, name: 'P123', deskripsi: 'deksprs1', gambar: '../assets/img/skilllogo/angular.png', tingkat_int: 80, tingkat_str: 'Intermediate' },
+];
+var COMPUTERS = [
+    { id: 1, name: 'P123', deskripsi: 'deksprs1', gambar: '../assets/img/skilllogo/angular.png', tingkat_int: 80, tingkat_str: 'Intermediate' },
+];
+var GENERALS = [
+    { id: 1, name: 'P123', deskripsi: 'deksprs1', gambar: '../assets/img/skilllogo/angular.png', tingkat_int: 80, tingkat_str: 'Intermediate' },
+];
+
+
+/***/ }),
+
+/***/ "./src/app/skill/skill.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/skill/skill.component.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".landing-page {\r\n  background-image: url('blocky.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.cus-shadow{\r\n    text-shadow: rgb(255, 255, 255) 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-text-background{\r\n\tbackground-image: url('grey.jpg')\r\n}\r\n.cus-text-background-card{\r\n\tbackground-color:aliceblue;\r\n}\r\n.scroll-pls{\r\n\theight:300px;\r\n\tposition: relative;\r\n\toverflow-y: scroll;\r\n\tscroll-behavior: smooth;\r\n}\r\n.text-lebar{\r\n\twidth: 40%;\r\n\tposition:relative;\r\n}\r\n.row {\r\n  display: flex;/* equal height of the children */\r\n}\r\n.col {\r\n  flex: 1; /* additionally, equal width */\r\n  padding: 1em;\r\n  border: solid;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGwvc2tpbGwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1DQUFpRTtFQUNqRSwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHNCQUFzQjtBQUN4QjtBQUNBO0lBQ0ksMkNBQTJDO0lBQzNDLG1DQUFtQztBQUN2QztBQUNBO0NBQ0M7QUFDRDtBQUNBO0NBQ0MsMEJBQTBCO0FBQzNCO0FBQ0E7Q0FDQyxZQUFZO0NBQ1osa0JBQWtCO0NBQ2xCLGtCQUFrQjtDQUNsQix1QkFBdUI7QUFDeEI7QUFDQTtDQUNDLFVBQVU7Q0FDVixpQkFBaUI7QUFDbEI7QUFDQTtFQUNFLGFBQWEsQ0FBQyxpQ0FBaUM7QUFDakQ7QUFFQTtFQUNFLE9BQU8sRUFBRSw4QkFBOEI7RUFDdkMsWUFBWTtFQUNaLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL3NraWxsL3NraWxsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGFuZGluZy1wYWdlIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi8uLi9hc3NldHMvL2ltZy8vY2Fyb3VzZWwvLy9ibG9ja3kuanBnXCIpO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuLmN1cy1zaGFkb3d7XHJcbiAgICB0ZXh0LXNoYWRvdzogcmdiKDI1NSwgMjU1LCAyNTUpIDFweCAxcHggMnB4O1xyXG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbn1cclxuLmN1cy10ZXh0LWJhY2tncm91bmR7XHJcblx0YmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzLy9pbWcvL2Nhcm91c2VsLy9ncmV5LmpwZ1wiKVxyXG59XHJcbi5jdXMtdGV4dC1iYWNrZ3JvdW5kLWNhcmR7XHJcblx0YmFja2dyb3VuZC1jb2xvcjphbGljZWJsdWU7XHJcbn1cclxuLnNjcm9sbC1wbHN7XHJcblx0aGVpZ2h0OjMwMHB4O1xyXG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHRvdmVyZmxvdy15OiBzY3JvbGw7XHJcblx0c2Nyb2xsLWJlaGF2aW9yOiBzbW9vdGg7XHJcbn1cclxuLnRleHQtbGViYXJ7XHJcblx0d2lkdGg6IDQwJTtcclxuXHRwb3NpdGlvbjpyZWxhdGl2ZTtcclxufVxyXG4ucm93IHtcclxuICBkaXNwbGF5OiBmbGV4Oy8qIGVxdWFsIGhlaWdodCBvZiB0aGUgY2hpbGRyZW4gKi9cclxufVxyXG5cclxuLmNvbCB7XHJcbiAgZmxleDogMTsgLyogYWRkaXRpb25hbGx5LCBlcXVhbCB3aWR0aCAqL1xyXG4gIHBhZGRpbmc6IDFlbTtcclxuICBib3JkZXI6IHNvbGlkO1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/skill/skill.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/skill/skill.component.ts ***!
+  \******************************************/
+/*! exports provided: SkillComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillComponent", function() { return SkillComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _skill_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../skill-list */ "./src/app/skill-list.ts");
+
+
+
+var SkillComponent = /** @class */ (function () {
+    function SkillComponent() {
+        this.webs = _skill_list__WEBPACK_IMPORTED_MODULE_2__["WEBS"];
+    }
+    SkillComponent.prototype.ngOnInit = function () {
+    };
+    SkillComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-skill',
+            template: __webpack_require__(/*! raw-loader!./skill.component.html */ "./node_modules/raw-loader/index.js!./src/app/skill/skill.component.html"),
+            styles: [__webpack_require__(/*! ./skill.component.css */ "./src/app/skill/skill.component.css")]
+        })
+    ], SkillComponent);
+    return SkillComponent;
 }());
 
 
