@@ -45,6 +45,17 @@ module.exports = "<div id=\"carouselExampleControls\" class=\"carousel slide\" d
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/contact/contact.component.html":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/contact/contact.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>contact works!</p>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/landing/landing.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/landing/landing.component.html ***!
@@ -85,7 +96,7 @@ module.exports = "<div class=\"landing-page border-top border-bottom border-seco
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-page pb-5 border-top border-bottom border-secondary text-center\" id=\"skill-comp\">\r\n\t<h1 class=\"h1 pt-5 pb-3 cus-shadow\"> My Skills</h1>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 cus-text-background border border-secondary\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let web of webs\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{web.name}}\">{{web.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let web of webs\" data-target=\"#list-example\">\r\n\t\t\t  <a id=\"list-item-{{web.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{web.name}}</h3></a>\r\n\t\t\t  <img src=\"{{web.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{web.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"landing-page pb-5 border-top border-bottom border-secondary text-center\" id=\"skill-comp\">\r\n\t<h1 class=\"h1 pt-5 pb-3 cus-shadow\"> My Skills</h1>\r\n\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">\r\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#web-dev\">Web Development</a>\r\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#program-dev\">Program Development</a>\r\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#computer-stuff\">Computer Related</a>\r\n\t</div>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\" id=\"web-dev\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let web of webs\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{web.name}}\">{{web.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let web of webs\" data-target=\"#list-example\">\r\n\t\t\t  <a id=\"list-item-{{web.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{web.name}}</h3></a>\r\n\t\t\t  <img src=\"{{web.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{web.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\" id=\"program-dev\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let program of programs\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{program.name}}\">{{program.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let program of programs\" data-target=\"#list-example\">\r\n\t\t\t  <a id=\"list-item-{{program.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{program.name}}</h3></a>\r\n\t\t\t  <img src=\"{{program.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{width:program.tingkat_int}\" attr.aria-valuenow=\"{{program.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{program.tingkat_str}}</div>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{program.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\" id=\"computer-stuff\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let computer of computers\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{computer.name}}\">{{computer.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let computer of computers\" data-target=\"#list-example\">\r\n\t\t\t  <a id=\"list-item-{{computer.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{computer.name}}</h3></a>\r\n\t\t\t  <img src=\"{{computer.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{width:computer.tingkat_int}\" attr.aria-valuenow=\"{{computer.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{computer.tingkat_str}}</div>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{computer.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -204,6 +215,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
 /* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
 /* harmony import */ var _skill_skill_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./skill/skill.component */ "./src/app/skill/skill.component.ts");
+/* harmony import */ var _contact_contact_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./contact/contact.component */ "./src/app/contact/contact.component.ts");
+
 
 
 
@@ -226,6 +239,7 @@ var AppModule = /** @class */ (function () {
                 _landing_landing_component__WEBPACK_IMPORTED_MODULE_7__["LandingComponent"],
                 _project_project_component__WEBPACK_IMPORTED_MODULE_8__["ProjectComponent"],
                 _skill_skill_component__WEBPACK_IMPORTED_MODULE_9__["SkillComponent"],
+                _contact_contact_component__WEBPACK_IMPORTED_MODULE_10__["ContactComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -280,6 +294,50 @@ var CarouselComponent = /** @class */ (function () {
         })
     ], CarouselComponent);
     return CarouselComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/contact/contact.component.css":
+/*!***********************************************!*\
+  !*** ./src/app/contact/contact.component.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QvY29udGFjdC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/contact/contact.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/contact/contact.component.ts ***!
+  \**********************************************/
+/*! exports provided: ContactComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ContactComponent = /** @class */ (function () {
+    function ContactComponent() {
+    }
+    ContactComponent.prototype.ngOnInit = function () {
+    };
+    ContactComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-contact',
+            template: __webpack_require__(/*! raw-loader!./contact.component.html */ "./node_modules/raw-loader/index.js!./src/app/contact/contact.component.html"),
+            styles: [__webpack_require__(/*! ./contact.component.css */ "./src/app/contact/contact.component.css")]
+        })
+    ], ContactComponent);
+    return ContactComponent;
 }());
 
 
@@ -465,13 +523,21 @@ var WEBS = [
     { id: 6, name: 'Angular', deskripsi: 'Angular really makes things tiddy, i like it this way, no messy codes splattered all over the place. Easy routing, nice parent/child relation, good structure, easy to understand DI... just great to use, Im not expert at angular yet at the moment. Stuff like directives, lifecycle hooks, RxJS, and many more are still confusing to me.', gambar: '../assets/img/skilllogo/angular-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
 ];
 var PROGRAMS = [
-    { id: 1, name: 'P123', deskripsi: 'deksprs1', gambar: '../assets/img/skilllogo/angular.png', tingkat_int: 80, tingkat_str: 'Intermediate' },
+    { id: 1, name: 'Java', deskripsi: 'Java is my first OOP, it was fairly hard to grasp at first after learning procedural programming like pascal. However OOP architecture offers so much advantages, such as maintanable program, reusable code, inheritance, clean system design, and easy troubleshooting. ', gambar: '../assets/img/skilllogo/java-small.png', tingkat_int: '90%', tingkat_str: 'Intermediate' },
+    { id: 2, name: 'NetBeans', deskripsi: 'Netbeans is IDE to use when it comes to developing java program. It was easy to use, clean interface, and provides lots of great plugins. While i also use eclipse for web development, netbeans is still my go to for java.', gambar: '../assets/img/skilllogo/netbeans-small.png', tingkat_int: '90%', tingkat_str: 'Intermediate' },
+    { id: 3, name: 'MariaDB', deskripsi: 'MariaDB is a fork from MySQL, which is compatible to each other of the same version. MySQL was replaced by MariaDB in xampp package version 5.5.30, since then I have been using  it. There is no difference in querries so it helps a lot.', gambar: '../assets/img/skilllogo/mariadb-small.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
+    { id: 4, name: 'Git', deskripsi: 'Git is version control system that I use. I dont have much experience with it for community project as I only have one community project. Despite that im confident i know how it works, and how to use it in a community. To use git, i prefer using git bash as it also includes bash shell.', gambar: '../assets/img/skilllogo/git-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
+    { id: 5, name: 'GitHub', deskripsi: 'Github is a service that let you host your repositories online, what it means is that you can work on a project without having to be in local network where local repositories exist. Same with git, I only use it once for community project for my internship project. ', gambar: '../assets/img/skilllogo/github-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
+    { id: 6, name: 'NodeJS', deskripsi: 'NodeJS can do lots of thing, unfortunately I dont really use it that much aside from its package manager.', gambar: '../assets/img/skilllogo/nodejs-small.png', tingkat_int: '20%', tingkat_str: 'Beginner' },
 ];
 var COMPUTERS = [
-    { id: 1, name: 'P123', deskripsi: 'deksprs1', gambar: '../assets/img/skilllogo/angular.png', tingkat_int: 80, tingkat_str: 'Intermediate' },
+    { id: 1, name: 'Computer Hardware', deskripsi: 'Im not expert at it, nor do i following the hardware tech closely. However i know the general trend and understand how to use as well as troubleshooting them. Now, I can do troubleshoot and make things works if there are spare parts or no component need to be replaced, however soldering and fixing the board or the elecrity are beyond me. ', gambar: '../assets/img/skilllogo/computer-small.png', tingkat_int: '70%', tingkat_str: 'Intermediate' },
+    { id: 2, name: 'Windows', deskripsi: 'I know how windows works, well not too deep anyway. I can troubleshoot it, and fix most problem. But when windows is so corrupt its just beyond repair, I prefer backing up the data in the partition to another computer then reinstall the OS.', gambar: '../assets/img/skilllogo/windows-small.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
+    { id: 3, name: 'Ms. Word, Excel, and Powerpoint', deskripsi: 'I am very familiar with Word and Powerpoint as I use it a lot for assignment, while I dont touch Excel too much, I know how to do formula, and general stuff with it. ', gambar: '../assets/img/skilllogo/office-small.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
+    { id: 4, name: 'Networking', deskripsi: 'Networking is my basic before college where I turn to programming. I have the general knowledge regarding it, I can set up local network(lan/man/wan) either with wire or wireless, I can set up a server(file server, web server), and I can work with linux-based VPS as well.', gambar: '../assets/img/skilllogo/networking-small.png', tingkat_int: '60%', tingkat_str: 'Intermediate' },
 ];
 var GENERALS = [
-    { id: 1, name: 'P123', deskripsi: 'deksprs1', gambar: '../assets/img/skilllogo/angular.png', tingkat_int: 80, tingkat_str: 'Intermediate' },
+    { id: 1, name: 'P123', deskripsi: 'deksprs1', gambar: '../assets/img/skilllogo/angular.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
 ];
 
 
@@ -507,6 +573,8 @@ __webpack_require__.r(__webpack_exports__);
 var SkillComponent = /** @class */ (function () {
     function SkillComponent() {
         this.webs = _skill_list__WEBPACK_IMPORTED_MODULE_2__["WEBS"];
+        this.programs = _skill_list__WEBPACK_IMPORTED_MODULE_2__["PROGRAMS"];
+        this.computers = _skill_list__WEBPACK_IMPORTED_MODULE_2__["COMPUTERS"];
     }
     SkillComponent.prototype.ngOnInit = function () {
     };
