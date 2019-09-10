@@ -63,7 +63,7 @@ module.exports = "<p>contact works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"landing-page d-flex snap-sini border-bottom border-secondary\" id=\"about-comp\">\r\n\t<div class=\"container text-center my-auto cus-max-width\" id=\"about\">\r\n\t\t<img src=\"../../assets/img/carousel/mypic200slaced.jpg\" class=\"cus-gambar margin-bot-1 gambarkeluar\" id=\"gambarku\">\r\n\t\t<h1 class=\"h1 text-secondary margin-bot-1 font-weight-bold cus-shadow\">About Me</h1>\r\n\t\t<p class=\"h5 text-secondary margin-bot-2 font-italic cus-shadow\">I have always been interested in computer related stuff, started with networking at high school then focusing more on programming at college.\r\n\t\tMy favorite programming language is java as it was my first OOP.</p>\r\n\t</div>\r\n</header>\r\n"
+module.exports = "<header class=\"landing-page d-flex snap-sini border-bottom border-secondary\" id=\"about-comp\">\r\n\t<div class=\"container text-center my-auto cus-max-width\" id=\"about\">\r\n\t\t<img src=\"../../assets/img/carousel/mypic200slaced-edited.png\" class=\"cus-gambar margin-bot-1 gambarkeluar\" id=\"gambarku\">\r\n\t\t<h1 class=\"h1 text-secondary margin-bot-1 font-weight-bold cus-shadow\">About Me</h1>\r\n\t\t<p class=\"h5 text-secondary margin-bot-2 font-italic cus-shadow\">I have always been interested in computer related stuff, started with networking at high school then focusing more on programming at college.\r\n\t\tMy favorite programming language is java as it was my first OOP.</p>\r\n\t</div>\r\n</header>\r\n"
 
 /***/ }),
 
@@ -96,7 +96,62 @@ module.exports = "<div class=\"landing-page border-top border-bottom border-seco
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-page pb-5 border-top border-bottom border-secondary text-center\" id=\"skill-comp\">\r\n\t<h1 class=\"h1 pt-5 pb-3 cus-shadow\"> My Skills</h1>\r\n\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">\r\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#web-dev\">Web Development</a>\r\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#program-dev\">Program Development</a>\r\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#computer-stuff\">Computer Related</a>\r\n\t</div>\r\n\t<a id=\"web-dev\" class=\"anchor\"></a>\r\n    <h3 class=\"h3 text-left pt-5 ml-5 cus-shadow\"><span class=\"text-muted\">#</span>Web Development</h3>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let web of webs\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{web.name}}\" (click)=\"onClick1()\" id=\"button\">{{web.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let web of webs\" data-target=\"#list-example\" >\r\n\t\t\t  <a id=\"list-item-{{web.name}}\"></a>\r\n\t\t\t  <h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{web.name}}</h3>\r\n\t\t\t  <img src=\"{{web.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div *ngIf=\"web.tingkat_str=='Beginner'; else inter\" class=\"progress-bar bg-success\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\r\n\t\t\t\t<ng-template #inter>\r\n\t\t\t\t    <div class=\"progress-bar bg-info\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\r\n\t\t\t\t</ng-template>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{web.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n\t<a id=\"program-dev\" class=\"anchor\"></a>\r\n    <h3 class=\"h3 text-left pt-5 ml-5 cus-shadow\"><span class=\"text-muted\">#</span>Program Development</h3>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let program of programs\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{program.name}}\" (click)=\"onClick2()\" id=\"button\">{{program.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let program of programs\" data-target=\"#list-example\">\r\n\t\t\t  <a id=\"list-item-{{program.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{program.name}}</h3></a>\r\n\t\t\t  <img src=\"{{program.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div *ngIf=\"program.tingkat_str=='Beginner'; else inter\" class=\"progress-bar bg-success\" role=\"progressbar\" [ngStyle]=\"{width:program.tingkat_int}\" attr.aria-valuenow=\"{{program.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{program.tingkat_str}}</div>\r\n\t\t\t\t<ng-template #inter>\r\n\t\t\t\t    <div class=\"progress-bar bg-info\" role=\"progressbar\" [ngStyle]=\"{width:program.tingkat_int}\" attr.aria-valuenow=\"{{program.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{program.tingkat_str}}</div>\r\n\t\t\t\t</ng-template>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{program.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n\t<a id=\"computer-stuff\" class=\"anchor\"></a>\r\n    <h3 class=\"h3 text-left pt-5 ml-5 cus-shadow\"><span class=\"text-muted\">#</span>Computer-Related Skills</h3>\r\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\">\r\n\t  <div class=\"col-2\">\r\n\t    <div *ngFor=\"let computer of computers\" id=\"list-example\" class=\"list-group\">\r\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{computer.name}}\" (click)=\"onClick3()\" id=\"button\">{{computer.name}}</a>\r\n\t\t</div>\r\n\t  </div>\r\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\r\n\t\t<div *ngFor=\"let computer of computers\" data-target=\"#list-example\">\r\n\t\t\t  <a id=\"list-item-{{computer.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{computer.name}}</h3></a>\r\n\t\t\t  <img src=\"{{computer.gambar}}\">\r\n\t\t\t  <div class=\"progress mr-5 ml-5\">\r\n\t\t\t\t<div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{width:computer.tingkat_int}\" attr.aria-valuenow=\"{{computer.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{computer.tingkat_str}}</div>\r\n\t\t\t  </div>\r\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{computer.deskripsi}}</p>\r\n\t\t</div>\r\n\t  </div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"landing-page pb-5 border-top border-bottom border-secondary text-center\" id=\"skill-comp\">\r\n\t<h1 class=\"h1 pt-5 pb-3 cus-shadow\"> My Skills</h1>\r\n\t<div class =\"sembunyikan-kecil\">\r\n\t\t<app-skillwide></app-skillwide>\r\n\t</div>\r\n\t<div class =\"sembunyikan-besar\">\r\n\t\t<app-skillsmall></app-skillsmall>\r\n\t</div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/computers/computers.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/skill/skillsmall/computers/computers.component.html ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"accordion\" class=\"mr-4 ml-4 mt-5\" >\n    <div class=\"card\" *ngFor=\"let computer of computers\">\n      <div class=\"card-header warna-grey\" id=\"heading{{computer.id}}\">\n        <h5 class=\"mb-0\">\n          <button class=\"btn btn-link warna-tulisan\" data-toggle=\"collapse\" [attr.data-target]=\"'#tag'+computer.id\" aria-expanded=\"true\" [attr.aria-controls]=\"'collapse'+computer.id\">\n            {{computer.name}}\n          </button>\n        </h5>\n      </div>\n  \n      <div id=\"tag{{computer.id}}\" class=\"collapse\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n        <div class=\"card-body\">\n            <a id=\"list-item-{{computer.name}}\"></a>\n            <h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{computer.name}}</h3>\n            <img src=\"{{computer.gambar}}\">\n            <div class=\"progress mr-1 ml-1\">\n              <div *ngIf=\"computer.tingkat_str=='Beginner'; else inter\" class=\"progress-bar bg-success\" role=\"progressbar\" [ngStyle]=\"{width:computer.tingkat_int}\" attr.aria-valuenow=\"{{computer.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{computer.tingkat_str}}</div>\n              <ng-template #inter>\n                  <div class=\"progress-bar bg-info\" role=\"progressbar\" [ngStyle]=\"{width:computer.tingkat_int}\" attr.aria-valuenow=\"{{computer.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{computer.tingkat_str}}</div>\n              </ng-template>\n            </div>\n            <p class=\"text-justify lead ml-1 mr-1 mb-2 mt-2\">{{computer.deskripsi}}</p>\n        </div>\n      </div>\n    </div>\n</div>\n\n\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/programs/programs.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/skill/skillsmall/programs/programs.component.html ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"accordion\" class=\"mr-4 ml-4 mt-5\" >\n    <div class=\"card\" *ngFor=\"let program of programs\">\n      <div class=\"card-header warna-grey\" id=\"heading{{program.id}}\">\n        <h5 class=\"mb-0\">\n          <button class=\"btn btn-link warna-tulisan\" data-toggle=\"collapse\" [attr.data-target]=\"'#tag'+program.id\" aria-expanded=\"true\" [attr.aria-controls]=\"'collapse'+program.id\">\n            {{program.name}}\n          </button>\n        </h5>\n      </div>\n  \n      <div id=\"tag{{program.id}}\" class=\"collapse\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n        <div class=\"card-body\">\n            <a id=\"list-item-{{program.name}}\"></a>\n            <h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{program.name}}</h3>\n            <img src=\"{{program.gambar}}\">\n            <div class=\"progress mr-1 ml-1\">\n              <div *ngIf=\"program.tingkat_str=='Beginner'; else inter\" class=\"progress-bar bg-success\" role=\"progressbar\" [ngStyle]=\"{width:program.tingkat_int}\" attr.aria-valuenow=\"{{program.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{program.tingkat_str}}</div>\n              <ng-template #inter>\n                  <div class=\"progress-bar bg-info\" role=\"progressbar\" [ngStyle]=\"{width:program.tingkat_int}\" attr.aria-valuenow=\"{{program.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{program.tingkat_str}}</div>\n              </ng-template>\n            </div>\n            <p class=\"text-justify lead ml-1 mr-1 mb-2 mt-2\">{{program.deskripsi}}</p>\n        </div>\n      </div>\n    </div>\n</div>\n\n\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/skillsmall.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/skill/skillsmall/skillsmall.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"btn-group mr-2 ml-2\" role=\"group\" aria-label=\"Basic example\">\n    <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" (click)=\"toogletab(1)\">Web Development</a>\n    <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" (click)=\"toogletab(2)\">Program Development</a>\n    <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" (click)=\"toogletab(3)\">Computer Related</a>\n</div>\n<div [ngSwitch]=\"trigger\">\n    <div *ngSwitchCase=\"1\"><app-webs></app-webs></div>\n    <div *ngSwitchCase=\"2\"><app-programs></app-programs></div>\n    <div *ngSwitchCase=\"3\"><app-computers></app-computers></div>\n    <div *ngSwitchDefault><app-webs></app-webs></div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/webs/webs.component.html":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/skill/skillsmall/webs/webs.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"accordion\" class=\"mr-4 ml-4 mt-5\" >\n    <div class=\"card\" *ngFor=\"let web of webs\">\n      <div class=\"card-header warna-grey\" id=\"heading{{web.id}}\">\n        <h5 class=\"mb-0\">\n          <button class=\"btn btn-link warna-tulisan\" data-toggle=\"collapse\" [attr.data-target]=\"'#tag'+web.id\" aria-expanded=\"true\" [attr.aria-controls]=\"'collapse'+web.id\">\n            {{web.name}}\n          </button>\n        </h5>\n      </div>\n  \n      <div id=\"tag{{web.id}}\" class=\"collapse\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n        <div class=\"card-body\">\n            <a id=\"list-item-{{web.name}}\"></a>\n            <h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{web.name}}</h3>\n            <img src=\"{{web.gambar}}\">\n            <div class=\"progress mr-1 ml-1\">\n              <div *ngIf=\"web.tingkat_str=='Beginner'; else inter\" class=\"progress-bar bg-success\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\n              <ng-template #inter>\n                  <div class=\"progress-bar bg-info\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\n              </ng-template>\n            </div>\n            <p class=\"text-justify lead ml-1 mr-1 mb-2 mt-2\">{{web.deskripsi}}</p>\n        </div>\n      </div>\n    </div>\n</div>\n\n\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/skill/skillwide/skillwide.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/skill/skillwide/skillwide.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#web-dev\">Web Development</a>\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#program-dev\">Program Development</a>\n\t\t  <a type=\"button\" class=\"btn btn-secondary btn-outline-dark\" href=\"#computer-stuff\">Computer Related</a>\n\t</div>\n\t<a id=\"web-dev\" class=\"anchor\"></a>\n    <h3 class=\"h3 text-left pt-5 ml-5 cus-shadow\"><span class=\"text-muted\">#</span>Web Development</h3>\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\">\n\t  <div class=\"col-2\">\n\t    <div *ngFor=\"let web of webs\" id=\"list-example\" class=\"list-group\">\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{web.name}}\" (click)=\"onClick1()\" id=\"button\">{{web.name}}</a>\n\t\t</div>\n\t  </div>\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\n\t\t<div *ngFor=\"let web of webs\" data-target=\"#list-example\" >\n\t\t\t  <a id=\"list-item-{{web.name}}\"></a>\n\t\t\t  <h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{web.name}}</h3>\n\t\t\t  <img src=\"{{web.gambar}}\">\n\t\t\t  <div class=\"progress mr-5 ml-5\">\n\t\t\t\t<div *ngIf=\"web.tingkat_str=='Beginner'; else inter\" class=\"progress-bar bg-success\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\n\t\t\t\t<ng-template #inter>\n\t\t\t\t    <div class=\"progress-bar bg-info\" role=\"progressbar\" [ngStyle]=\"{width:web.tingkat_int}\" attr.aria-valuenow=\"{{web.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{web.tingkat_str}}</div>\n\t\t\t\t</ng-template>\n\t\t\t  </div>\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{web.deskripsi}}</p>\n\t\t</div>\n\t  </div>\n\t</div>\n\t<a id=\"program-dev\" class=\"anchor\"></a>\n    <h3 class=\"h3 text-left pt-5 ml-5 cus-shadow\"><span class=\"text-muted\">#</span>Program Development</h3>\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\">\n\t  <div class=\"col-2\">\n\t    <div *ngFor=\"let program of programs\" id=\"list-example\" class=\"list-group\">\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{program.name}}\" (click)=\"onClick2()\" id=\"button\">{{program.name}}</a>\n\t\t</div>\n\t  </div>\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\n\t\t<div *ngFor=\"let program of programs\" data-target=\"#list-example\">\n\t\t\t  <a id=\"list-item-{{program.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{program.name}}</h3></a>\n\t\t\t  <img src=\"{{program.gambar}}\">\n\t\t\t  <div class=\"progress mr-5 ml-5\">\n\t\t\t\t<div *ngIf=\"program.tingkat_str=='Beginner'; else inter\" class=\"progress-bar bg-success\" role=\"progressbar\" [ngStyle]=\"{width:program.tingkat_int}\" attr.aria-valuenow=\"{{program.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{program.tingkat_str}}</div>\n\t\t\t\t<ng-template #inter>\n\t\t\t\t    <div class=\"progress-bar bg-info\" role=\"progressbar\" [ngStyle]=\"{width:program.tingkat_int}\" attr.aria-valuenow=\"{{program.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{program.tingkat_str}}</div>\n\t\t\t\t</ng-template>\n\t\t\t  </div>\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{program.deskripsi}}</p>\n\t\t</div>\n\t  </div>\n\t</div>\n\t<a id=\"computer-stuff\" class=\"anchor\"></a>\n    <h3 class=\"h3 text-left pt-5 ml-5 cus-shadow\"><span class=\"text-muted\">#</span>Computer-Related Skills</h3>\n\t<div class=\"row  ml-5 mr-5 pt-3 pb-3 mb-4 mt-4 cus-text-background border border-secondary\">\n\t  <div class=\"col-2\">\n\t    <div *ngFor=\"let computer of computers\" id=\"list-example\" class=\"list-group\">\n\t\t\t  <a class=\"list-group-item list-group-item-action\" href=\"#list-item-{{computer.name}}\" (click)=\"onClick3()\" id=\"button\">{{computer.name}}</a>\n\t\t</div>\n\t  </div>\n\t  <div class=\"col-10 cus-text-background-card border border-secondary scroll-pls\">\n\t\t<div *ngFor=\"let computer of computers\" data-target=\"#list-example\">\n\t\t\t  <a id=\"list-item-{{computer.name}}\"><h3 class=\"h3 text-left\"><span class=\"text-muted\">#</span>{{computer.name}}</h3></a>\n\t\t\t  <img src=\"{{computer.gambar}}\">\n\t\t\t  <div class=\"progress mr-5 ml-5\">\n\t\t\t\t<div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{width:computer.tingkat_int}\" attr.aria-valuenow=\"{{computer.tingkat_int}}\" aria-valuemin=\"0\" aria-valuemax=\"100\">{{computer.tingkat_str}}</div>\n\t\t\t  </div>\n\t\t\t  \t<p class=\"text-justify lead ml-5 mr-5 mb-5 mt-2\">{{computer.deskripsi}}</p>\n\t\t</div>\n\t  </div>\n\t</div>"
 
 /***/ }),
 
@@ -216,6 +271,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
 /* harmony import */ var _skill_skill_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./skill/skill.component */ "./src/app/skill/skill.component.ts");
 /* harmony import */ var _contact_contact_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./contact/contact.component */ "./src/app/contact/contact.component.ts");
+/* harmony import */ var _skill_skillwide_skillwide_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./skill/skillwide/skillwide.component */ "./src/app/skill/skillwide/skillwide.component.ts");
+/* harmony import */ var _skill_skillsmall_skillsmall_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./skill/skillsmall/skillsmall.component */ "./src/app/skill/skillsmall/skillsmall.component.ts");
+/* harmony import */ var _skill_skillsmall_webs_webs_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./skill/skillsmall/webs/webs.component */ "./src/app/skill/skillsmall/webs/webs.component.ts");
+/* harmony import */ var _skill_skillsmall_programs_programs_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./skill/skillsmall/programs/programs.component */ "./src/app/skill/skillsmall/programs/programs.component.ts");
+/* harmony import */ var _skill_skillsmall_computers_computers_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./skill/skillsmall/computers/computers.component */ "./src/app/skill/skillsmall/computers/computers.component.ts");
+
+
+
+
+
 
 
 
@@ -240,6 +305,11 @@ var AppModule = /** @class */ (function () {
                 _project_project_component__WEBPACK_IMPORTED_MODULE_8__["ProjectComponent"],
                 _skill_skill_component__WEBPACK_IMPORTED_MODULE_9__["SkillComponent"],
                 _contact_contact_component__WEBPACK_IMPORTED_MODULE_10__["ContactComponent"],
+                _skill_skillwide_skillwide_component__WEBPACK_IMPORTED_MODULE_11__["SkillwideComponent"],
+                _skill_skillsmall_skillsmall_component__WEBPACK_IMPORTED_MODULE_12__["SkillsmallComponent"],
+                _skill_skillsmall_webs_webs_component__WEBPACK_IMPORTED_MODULE_13__["WebsComponent"],
+                _skill_skillsmall_programs_programs_component__WEBPACK_IMPORTED_MODULE_14__["ProgramsComponent"],
+                _skill_skillsmall_computers_computers_component__WEBPACK_IMPORTED_MODULE_15__["ComputersComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -516,7 +586,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GENERALS", function() { return GENERALS; });
 var WEBS = [
     { id: 1, name: 'HTML', deskripsi: 'I have clear grasp of how it was structured. I understand how DOM events work and how to use it as well as how HTML works with CSS and Javascript/Jquery. ', gambar: '../assets/img/skilllogo/html5-small.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
-    { id: 2, name: 'CSS', deskripsi: 'I wont say i have full graps of css as it has so many properties, however I know general attributes, selectors, and how it works, at the very least i can make a decent page with it alone(plus html of course).', gambar: '../assets/img/skilllogo/css-small.png', tingkat_int: '90%', tingkat_str: 'Intermediate' },
+    { id: 2, name: 'CSS', deskripsi: 'I wont say i have full graps of css as it has so many properties, however I know general attributes, selectors, and how it works, at the very least i can make a decent page with it alone(with html of course).', gambar: '../assets/img/skilllogo/css-small.png', tingkat_int: '90%', tingkat_str: 'Intermediate' },
     { id: 3, name: 'JavaScript', deskripsi: 'Javascript is still kinda vague, I can manipulate static data with it, but I prefer to use Jquery to do most of the job, especially when it comes to events.', gambar: '../assets/img/skilllogo/javascript-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
     { id: 4, name: 'Jquery', deskripsi: 'Same as Javascript, but at least i use Jquery more often than Javascript, doesnt mean i really get it thought, I can do some event function, or any other simple function, but nothing to advanced.', gambar: '../assets/img/skilllogo/jquery-small.png', tingkat_int: '40%', tingkat_str: 'Beginner' },
     { id: 5, name: 'Bootstrap', deskripsi: 'Bootstrap is probably what made me interested in web development. I mean, i did touch html, and css beforehand, but its so much of chore to do everything by myself. I havent use all it has to over, but the core concept like layout, and utilites are well understood. ', gambar: '../assets/img/skilllogo/bootstrap-small.png', tingkat_int: '80%', tingkat_str: 'Intermediate' },
@@ -550,7 +620,7 @@ var GENERALS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".landing-page {\r\n  background-image: url('blocky.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.cus-shadow{\r\n    text-shadow: rgb(255, 255, 255) 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-text-background{\r\n\tbackground-image: url('grey.jpg')\r\n}\r\n.cus-text-background-card{\r\n\tbackground-color:aliceblue;\r\n}\r\n.scroll-pls{\r\n\theight:300px;\r\n\tposition: relative;\r\n\toverflow-y: scroll;\r\n\tscroll-behavior: smooth;\r\n}\r\n.text-lebar{\r\n\twidth: 40%;\r\n\tposition:relative;\r\n}\r\n.row {\r\n  display: flex;/* equal height of the children */\r\n}\r\n.col {\r\n  flex: 1; /* additionally, equal width */\r\n  padding: 1em;\r\n  border: solid;\r\n}\r\nh3 span{ \r\n  padding-top: 40px;\r\n  margin-top: -40px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\na.anchor {\r\n    display: block;\r\n    position: relative;\r\n    top: -50px;\r\n    visibility: hidden;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGwvc2tpbGwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1DQUFpRTtFQUNqRSwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHNCQUFzQjtBQUN4QjtBQUNBO0lBQ0ksMkNBQTJDO0lBQzNDLG1DQUFtQztBQUN2QztBQUNBO0NBQ0M7QUFDRDtBQUNBO0NBQ0MsMEJBQTBCO0FBQzNCO0FBQ0E7Q0FDQyxZQUFZO0NBQ1osa0JBQWtCO0NBQ2xCLGtCQUFrQjtDQUNsQix1QkFBdUI7QUFDeEI7QUFDQTtDQUNDLFVBQVU7Q0FDVixpQkFBaUI7QUFDbEI7QUFDQTtFQUNFLGFBQWEsQ0FBQyxpQ0FBaUM7QUFDakQ7QUFFQTtFQUNFLE9BQU8sRUFBRSw4QkFBOEI7RUFDdkMsWUFBWTtFQUNaLGFBQWE7QUFDZjtBQUNBO0VBQ0UsaUJBQWlCO0VBQ2pCLGlCQUFpQjtFQUNqQixxQkFBcUI7RUFDckIsbUJBQW1CO0FBQ3JCO0FBQ0E7SUFDSSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9za2lsbC9za2lsbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxhbmRpbmctcGFnZSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzLy9pbWcvL2Nhcm91c2VsLy8vYmxvY2t5LmpwZ1wiKTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcbi5jdXMtc2hhZG93e1xyXG4gICAgdGV4dC1zaGFkb3c6IHJnYigyNTUsIDI1NSwgMjU1KSAxcHggMXB4IDJweDtcclxuICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG59XHJcbi5jdXMtdGV4dC1iYWNrZ3JvdW5ke1xyXG5cdGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy8vaW1nLy9jYXJvdXNlbC8vZ3JleS5qcGdcIilcclxufVxyXG4uY3VzLXRleHQtYmFja2dyb3VuZC1jYXJke1xyXG5cdGJhY2tncm91bmQtY29sb3I6YWxpY2VibHVlO1xyXG59XHJcbi5zY3JvbGwtcGxze1xyXG5cdGhlaWdodDozMDBweDtcclxuXHRwb3NpdGlvbjogcmVsYXRpdmU7XHJcblx0b3ZlcmZsb3cteTogc2Nyb2xsO1xyXG5cdHNjcm9sbC1iZWhhdmlvcjogc21vb3RoO1xyXG59XHJcbi50ZXh0LWxlYmFye1xyXG5cdHdpZHRoOiA0MCU7XHJcblx0cG9zaXRpb246cmVsYXRpdmU7XHJcbn1cclxuLnJvdyB7XHJcbiAgZGlzcGxheTogZmxleDsvKiBlcXVhbCBoZWlnaHQgb2YgdGhlIGNoaWxkcmVuICovXHJcbn1cclxuXHJcbi5jb2wge1xyXG4gIGZsZXg6IDE7IC8qIGFkZGl0aW9uYWxseSwgZXF1YWwgd2lkdGggKi9cclxuICBwYWRkaW5nOiAxZW07XHJcbiAgYm9yZGVyOiBzb2xpZDtcclxufVxyXG5oMyBzcGFueyBcclxuICBwYWRkaW5nLXRvcDogNDBweDtcclxuICBtYXJnaW4tdG9wOiAtNDBweDtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgdmVydGljYWwtYWxpZ246IHRvcDtcclxufVxyXG5hLmFuY2hvciB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHRvcDogLTUwcHg7XHJcbiAgICB2aXNpYmlsaXR5OiBoaWRkZW47XHJcbn0iXX0= */"
+module.exports = ".landing-page {\r\n  background-image: url('blocky.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.cus-shadow{\r\n    text-shadow: rgb(255, 255, 255) 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-text-background{\r\n\tbackground-image: url('grey.jpg')\r\n}\r\n.cus-text-background-card{\r\n\tbackground-color:aliceblue;\r\n}\r\n@media only screen and (max-width: 767px) {\r\n  .sembunyikan-kecil{\r\n\tdisplay : none;\r\n  }\r\n}\r\n@media only screen and (min-width: 768px) {\r\n  .sembunyikan-besar{\r\n\tdisplay : none;\r\n  }\r\n}\r\n.scroll-pls{\r\n\theight:300px;\r\n\tposition: relative;\r\n\toverflow-y: scroll;\r\n\tscroll-behavior: smooth;\r\n}\r\n.text-lebar{\r\n\twidth: 40%;\r\n\tposition:relative;\r\n}\r\n.row {\r\n  display: flex;/* equal height of the children */\r\n}\r\n.col {\r\n  flex: 1; /* additionally, equal width */\r\n  padding: 1em;\r\n  border: solid;\r\n}\r\nh3 span{ \r\n  padding-top: 40px;\r\n  margin-top: -40px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\na.anchor {\r\n    display: block;\r\n    position: relative;\r\n    top: -50px;\r\n    visibility: hidden;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGwvc2tpbGwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1DQUFpRTtFQUNqRSwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHNCQUFzQjtBQUN4QjtBQUNBO0lBQ0ksMkNBQTJDO0lBQzNDLG1DQUFtQztBQUN2QztBQUNBO0NBQ0M7QUFDRDtBQUNBO0NBQ0MsMEJBQTBCO0FBQzNCO0FBRUE7RUFDRTtDQUNELGNBQWM7RUFDYjtBQUNGO0FBQ0E7RUFDRTtDQUNELGNBQWM7RUFDYjtBQUNGO0FBQ0M7Q0FDQSxZQUFZO0NBQ1osa0JBQWtCO0NBQ2xCLGtCQUFrQjtDQUNsQix1QkFBdUI7QUFDeEI7QUFDQTtDQUNDLFVBQVU7Q0FDVixpQkFBaUI7QUFDbEI7QUFDQTtFQUNFLGFBQWEsQ0FBQyxpQ0FBaUM7QUFDakQ7QUFFQTtFQUNFLE9BQU8sRUFBRSw4QkFBOEI7RUFDdkMsWUFBWTtFQUNaLGFBQWE7QUFDZjtBQUNBO0VBQ0UsaUJBQWlCO0VBQ2pCLGlCQUFpQjtFQUNqQixxQkFBcUI7RUFDckIsbUJBQW1CO0FBQ3JCO0FBQ0E7SUFDSSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9za2lsbC9za2lsbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxhbmRpbmctcGFnZSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzLy9pbWcvL2Nhcm91c2VsLy8vYmxvY2t5LmpwZ1wiKTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcbi5jdXMtc2hhZG93e1xyXG4gICAgdGV4dC1zaGFkb3c6IHJnYigyNTUsIDI1NSwgMjU1KSAxcHggMXB4IDJweDtcclxuICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG59XHJcbi5jdXMtdGV4dC1iYWNrZ3JvdW5ke1xyXG5cdGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy8vaW1nLy9jYXJvdXNlbC8vZ3JleS5qcGdcIilcclxufVxyXG4uY3VzLXRleHQtYmFja2dyb3VuZC1jYXJke1xyXG5cdGJhY2tncm91bmQtY29sb3I6YWxpY2VibHVlO1xyXG59XHJcblxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XHJcbiAgLnNlbWJ1bnlpa2FuLWtlY2lse1xyXG5cdGRpc3BsYXkgOiBub25lO1xyXG4gIH1cclxufVxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgLnNlbWJ1bnlpa2FuLWJlc2Fye1xyXG5cdGRpc3BsYXkgOiBub25lO1xyXG4gIH1cclxufVxyXG4gLnNjcm9sbC1wbHN7XHJcblx0aGVpZ2h0OjMwMHB4O1xyXG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHRvdmVyZmxvdy15OiBzY3JvbGw7XHJcblx0c2Nyb2xsLWJlaGF2aW9yOiBzbW9vdGg7XHJcbn1cclxuLnRleHQtbGViYXJ7XHJcblx0d2lkdGg6IDQwJTtcclxuXHRwb3NpdGlvbjpyZWxhdGl2ZTtcclxufVxyXG4ucm93IHtcclxuICBkaXNwbGF5OiBmbGV4Oy8qIGVxdWFsIGhlaWdodCBvZiB0aGUgY2hpbGRyZW4gKi9cclxufVxyXG5cclxuLmNvbCB7XHJcbiAgZmxleDogMTsgLyogYWRkaXRpb25hbGx5LCBlcXVhbCB3aWR0aCAqL1xyXG4gIHBhZGRpbmc6IDFlbTtcclxuICBib3JkZXI6IHNvbGlkO1xyXG59XHJcbmgzIHNwYW57IFxyXG4gIHBhZGRpbmctdG9wOiA0MHB4O1xyXG4gIG1hcmdpbi10b3A6IC00MHB4O1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB2ZXJ0aWNhbC1hbGlnbjogdG9wO1xyXG59XHJcbmEuYW5jaG9yIHtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgdG9wOiAtNTBweDtcclxuICAgIHZpc2liaWxpdHk6IGhpZGRlbjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -566,32 +636,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillComponent", function() { return SkillComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _skill_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../skill-list */ "./src/app/skill-list.ts");
-
 
 
 var SkillComponent = /** @class */ (function () {
     function SkillComponent() {
-        this.webs = _skill_list__WEBPACK_IMPORTED_MODULE_2__["WEBS"];
-        this.programs = _skill_list__WEBPACK_IMPORTED_MODULE_2__["PROGRAMS"];
-        this.computers = _skill_list__WEBPACK_IMPORTED_MODULE_2__["COMPUTERS"];
     }
     SkillComponent.prototype.ngOnInit = function () {
-    };
-    SkillComponent.prototype.onClick1 = function () {
-        setTimeout(function () {
-            $('html, body').animate({ scrollTop: $("#web-dev").offset().top }, 0);
-        }, 1000);
-    };
-    SkillComponent.prototype.onClick2 = function () {
-        setTimeout(function () {
-            $('html, body').animate({ scrollTop: $("#program-dev").offset().top }, 0);
-        }, 1000);
-    };
-    SkillComponent.prototype.onClick3 = function () {
-        setTimeout(function () {
-            $('html, body').animate({ scrollTop: $("#computer-stuff").offset().top }, 0);
-        }, 1000);
     };
     SkillComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -601,6 +651,260 @@ var SkillComponent = /** @class */ (function () {
         })
     ], SkillComponent);
     return SkillComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/computers/computers.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/skill/skillsmall/computers/computers.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".warna-grey{\r\n    background-color: lightgray;\r\n}\r\n.warna-tulisan{\r\n    color: darkslategray;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGwvc2tpbGxzbWFsbC9jb21wdXRlcnMvY29tcHV0ZXJzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwyQkFBMkI7QUFDL0I7QUFDQTtJQUNJLG9CQUFvQjtBQUN4QiIsImZpbGUiOiJzcmMvYXBwL3NraWxsL3NraWxsc21hbGwvY29tcHV0ZXJzL2NvbXB1dGVycy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndhcm5hLWdyZXl7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XHJcbn1cclxuLndhcm5hLXR1bGlzYW57XHJcbiAgICBjb2xvcjogZGFya3NsYXRlZ3JheTtcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/computers/computers.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/skill/skillsmall/computers/computers.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: ComputersComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComputersComponent", function() { return ComputersComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_skill_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/skill-list */ "./src/app/skill-list.ts");
+
+
+
+var ComputersComponent = /** @class */ (function () {
+    function ComputersComponent() {
+        this.computers = src_app_skill_list__WEBPACK_IMPORTED_MODULE_2__["COMPUTERS"];
+    }
+    ComputersComponent.prototype.ngOnInit = function () {
+    };
+    ComputersComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-computers',
+            template: __webpack_require__(/*! raw-loader!./computers.component.html */ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/computers/computers.component.html"),
+            styles: [__webpack_require__(/*! ./computers.component.css */ "./src/app/skill/skillsmall/computers/computers.component.css")]
+        })
+    ], ComputersComponent);
+    return ComputersComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/programs/programs.component.css":
+/*!******************************************************************!*\
+  !*** ./src/app/skill/skillsmall/programs/programs.component.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".warna-grey{\r\n    background-color: lightgray;\r\n}\r\n.warna-tulisan{\r\n    color: darkslategray;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGwvc2tpbGxzbWFsbC9wcm9ncmFtcy9wcm9ncmFtcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksMkJBQTJCO0FBQy9CO0FBQ0E7SUFDSSxvQkFBb0I7QUFDeEIiLCJmaWxlIjoic3JjL2FwcC9za2lsbC9za2lsbHNtYWxsL3Byb2dyYW1zL3Byb2dyYW1zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud2FybmEtZ3JleXtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcclxufVxyXG4ud2FybmEtdHVsaXNhbntcclxuICAgIGNvbG9yOiBkYXJrc2xhdGVncmF5O1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/programs/programs.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/skill/skillsmall/programs/programs.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: ProgramsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramsComponent", function() { return ProgramsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_skill_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/skill-list */ "./src/app/skill-list.ts");
+
+
+
+var ProgramsComponent = /** @class */ (function () {
+    function ProgramsComponent() {
+        this.programs = src_app_skill_list__WEBPACK_IMPORTED_MODULE_2__["PROGRAMS"];
+    }
+    ProgramsComponent.prototype.ngOnInit = function () {
+    };
+    ProgramsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-programs',
+            template: __webpack_require__(/*! raw-loader!./programs.component.html */ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/programs/programs.component.html"),
+            styles: [__webpack_require__(/*! ./programs.component.css */ "./src/app/skill/skillsmall/programs/programs.component.css")]
+        })
+    ], ProgramsComponent);
+    return ProgramsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/skillsmall.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/skill/skillsmall/skillsmall.component.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NraWxsL3NraWxsc21hbGwvc2tpbGxzbWFsbC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/skillsmall.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/skill/skillsmall/skillsmall.component.ts ***!
+  \**********************************************************/
+/*! exports provided: SkillsmallComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillsmallComponent", function() { return SkillsmallComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SkillsmallComponent = /** @class */ (function () {
+    function SkillsmallComponent() {
+        this.trigger = 1;
+    }
+    SkillsmallComponent.prototype.ngOnInit = function () {
+    };
+    SkillsmallComponent.prototype.toogletab = function (attribut) {
+        this.trigger = attribut;
+        return this.trigger;
+    };
+    SkillsmallComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-skillsmall',
+            template: __webpack_require__(/*! raw-loader!./skillsmall.component.html */ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/skillsmall.component.html"),
+            styles: [__webpack_require__(/*! ./skillsmall.component.css */ "./src/app/skill/skillsmall/skillsmall.component.css")]
+        })
+    ], SkillsmallComponent);
+    return SkillsmallComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/webs/webs.component.css":
+/*!**********************************************************!*\
+  !*** ./src/app/skill/skillsmall/webs/webs.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".warna-grey{\r\n    background-color: lightgray;\r\n}\r\n.warna-tulisan{\r\n    color: darkslategray;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGwvc2tpbGxzbWFsbC93ZWJzL3dlYnMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLDJCQUEyQjtBQUMvQjtBQUNBO0lBQ0ksb0JBQW9CO0FBQ3hCIiwiZmlsZSI6InNyYy9hcHAvc2tpbGwvc2tpbGxzbWFsbC93ZWJzL3dlYnMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi53YXJuYS1ncmV5e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRncmF5O1xyXG59XHJcbi53YXJuYS10dWxpc2Fue1xyXG4gICAgY29sb3I6IGRhcmtzbGF0ZWdyYXk7XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/skill/skillsmall/webs/webs.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/skill/skillsmall/webs/webs.component.ts ***!
+  \*********************************************************/
+/*! exports provided: WebsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebsComponent", function() { return WebsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_skill_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/skill-list */ "./src/app/skill-list.ts");
+
+
+
+var WebsComponent = /** @class */ (function () {
+    function WebsComponent() {
+        this.webs = src_app_skill_list__WEBPACK_IMPORTED_MODULE_2__["WEBS"];
+    }
+    WebsComponent.prototype.ngOnInit = function () {
+    };
+    WebsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-webs',
+            template: __webpack_require__(/*! raw-loader!./webs.component.html */ "./node_modules/raw-loader/index.js!./src/app/skill/skillsmall/webs/webs.component.html"),
+            styles: [__webpack_require__(/*! ./webs.component.css */ "./src/app/skill/skillsmall/webs/webs.component.css")]
+        })
+    ], WebsComponent);
+    return WebsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/skill/skillwide/skillwide.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/skill/skillwide/skillwide.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".cus-shadow{\r\n    text-shadow: rgb(255, 255, 255) 1px 1px 2px;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n.cus-text-background{\r\n\tbackground-image: url('grey.jpg')\r\n}\r\n.cus-text-background-card{\r\n\tbackground-color:aliceblue;\r\n}\r\n@media only screen and (max-width: 767px) {\r\n  .sembunyikan-kecil{\r\n\tdisplay : none;\r\n}\r\n}\r\n.scroll-pls{\r\n\theight:300px;\r\n\tposition: relative;\r\n\toverflow-y: scroll;\r\n\tscroll-behavior: smooth;\r\n}\r\n.text-lebar{\r\n\twidth: 40%;\r\n\tposition:relative;\r\n}\r\n.row {\r\n  display: flex;/* equal height of the children */\r\n}\r\n.col {\r\n  flex: 1; /* additionally, equal width */\r\n  padding: 1em;\r\n  border: solid;\r\n}\r\nh3 span{ \r\n  padding-top: 40px;\r\n  margin-top: -40px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\na.anchor {\r\n    display: block;\r\n    position: relative;\r\n    top: -50px;\r\n    visibility: hidden;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGwvc2tpbGx3aWRlL3NraWxsd2lkZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksMkNBQTJDO0lBQzNDLG1DQUFtQztBQUN2QztBQUNBO0NBQ0M7QUFDRDtBQUNBO0NBQ0MsMEJBQTBCO0FBQzNCO0FBRUE7RUFDRTtDQUNELGNBQWM7QUFDZjtBQUNBO0FBQ0M7Q0FDQSxZQUFZO0NBQ1osa0JBQWtCO0NBQ2xCLGtCQUFrQjtDQUNsQix1QkFBdUI7QUFDeEI7QUFDQTtDQUNDLFVBQVU7Q0FDVixpQkFBaUI7QUFDbEI7QUFDQTtFQUNFLGFBQWEsQ0FBQyxpQ0FBaUM7QUFDakQ7QUFFQTtFQUNFLE9BQU8sRUFBRSw4QkFBOEI7RUFDdkMsWUFBWTtFQUNaLGFBQWE7QUFDZjtBQUNBO0VBQ0UsaUJBQWlCO0VBQ2pCLGlCQUFpQjtFQUNqQixxQkFBcUI7RUFDckIsbUJBQW1CO0FBQ3JCO0FBQ0E7SUFDSSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9za2lsbC9za2lsbHdpZGUvc2tpbGx3aWRlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzLXNoYWRvd3tcclxuICAgIHRleHQtc2hhZG93OiByZ2IoMjU1LCAyNTUsIDI1NSkgMXB4IDFweCAycHg7XHJcbiAgICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcclxufVxyXG4uY3VzLXRleHQtYmFja2dyb3VuZHtcclxuXHRiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi8uLi8uLi9hc3NldHMvL2ltZy8vY2Fyb3VzZWwvL2dyZXkuanBnXCIpXHJcbn1cclxuLmN1cy10ZXh0LWJhY2tncm91bmQtY2FyZHtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOmFsaWNlYmx1ZTtcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjdweCkge1xyXG4gIC5zZW1idW55aWthbi1rZWNpbHtcclxuXHRkaXNwbGF5IDogbm9uZTtcclxufVxyXG59XHJcbiAuc2Nyb2xsLXBsc3tcclxuXHRoZWlnaHQ6MzAwcHg7XHJcblx0cG9zaXRpb246IHJlbGF0aXZlO1xyXG5cdG92ZXJmbG93LXk6IHNjcm9sbDtcclxuXHRzY3JvbGwtYmVoYXZpb3I6IHNtb290aDtcclxufVxyXG4udGV4dC1sZWJhcntcclxuXHR3aWR0aDogNDAlO1xyXG5cdHBvc2l0aW9uOnJlbGF0aXZlO1xyXG59XHJcbi5yb3cge1xyXG4gIGRpc3BsYXk6IGZsZXg7LyogZXF1YWwgaGVpZ2h0IG9mIHRoZSBjaGlsZHJlbiAqL1xyXG59XHJcblxyXG4uY29sIHtcclxuICBmbGV4OiAxOyAvKiBhZGRpdGlvbmFsbHksIGVxdWFsIHdpZHRoICovXHJcbiAgcGFkZGluZzogMWVtO1xyXG4gIGJvcmRlcjogc29saWQ7XHJcbn1cclxuaDMgc3BhbnsgXHJcbiAgcGFkZGluZy10b3A6IDQwcHg7XHJcbiAgbWFyZ2luLXRvcDogLTQwcHg7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIHZlcnRpY2FsLWFsaWduOiB0b3A7XHJcbn1cclxuYS5hbmNob3Ige1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB0b3A6IC01MHB4O1xyXG4gICAgdmlzaWJpbGl0eTogaGlkZGVuO1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/skill/skillwide/skillwide.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/skill/skillwide/skillwide.component.ts ***!
+  \********************************************************/
+/*! exports provided: SkillwideComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillwideComponent", function() { return SkillwideComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _skill_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../skill-list */ "./src/app/skill-list.ts");
+
+
+
+var SkillwideComponent = /** @class */ (function () {
+    function SkillwideComponent() {
+        this.webs = _skill_list__WEBPACK_IMPORTED_MODULE_2__["WEBS"];
+        this.programs = _skill_list__WEBPACK_IMPORTED_MODULE_2__["PROGRAMS"];
+        this.computers = _skill_list__WEBPACK_IMPORTED_MODULE_2__["COMPUTERS"];
+    }
+    SkillwideComponent.prototype.ngOnInit = function () {
+    };
+    SkillwideComponent.prototype.onClick1 = function () {
+        setTimeout(function () {
+            $('html, body').animate({ scrollTop: $("#web-dev").offset().top }, 0);
+        }, 1000);
+    };
+    SkillwideComponent.prototype.onClick2 = function () {
+        setTimeout(function () {
+            $('html, body').animate({ scrollTop: $("#program-dev").offset().top }, 0);
+        }, 1000);
+    };
+    SkillwideComponent.prototype.onClick3 = function () {
+        setTimeout(function () {
+            $('html, body').animate({ scrollTop: $("#computer-stuff").offset().top }, 0);
+        }, 1000);
+    };
+    SkillwideComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-skillwide',
+            template: __webpack_require__(/*! raw-loader!./skillwide.component.html */ "./node_modules/raw-loader/index.js!./src/app/skill/skillwide/skillwide.component.html"),
+            styles: [__webpack_require__(/*! ./skillwide.component.css */ "./src/app/skill/skillwide/skillwide.component.css")]
+        })
+    ], SkillwideComponent);
+    return SkillwideComponent;
 }());
 
 
@@ -668,7 +972,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\programbayu\xampp56\htdocs\angular\myportofolio\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\ProgramBayu\xampp56\htdocs\angular\myportofolio\src\main.ts */"./src/main.ts");
 
 
 /***/ })
