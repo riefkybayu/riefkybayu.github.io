@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<app-landing></app-landing>\n<app-project></app-project>\n<app-skill></app-skill>\n<router-outlet></router-outlet>\n"
+module.exports = "<app-navbar></app-navbar>\n<app-landing></app-landing>\n<app-project></app-project>\n<app-skill></app-skill>\n<app-contact></app-contact>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div id=\"carouselExampleControls\" class=\"carousel slide\" d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>contact works!</p>\n"
+module.exports = "<div class=\"container-fluid bg-dark pt-4 pb-4\">\n    <nav class=\"navbar navbar-dark bg-dark justify-content-center pt-4 pb-4\">\n        <a class=\"navbar-brand mr-5 ml-5 hovering\" href=\"#\">\n            <img src=\"../../assets/img/kontak/whatsapp.png\" width=\"70\" height=\"70\" \n            onmouseover=\"this.src='../../assets/img/kontak/whatsapp-hover.png'\"\n            onmouseout=\"this.src='../../assets/img/kontak/whatsapp.png'\">\n        </a>\n        <a class=\"navbar-brand mr-5 ml-5\" href=\"https://github.com/riefkybayu/\">\n            <img src=\"../../assets/img/kontak/github.png\" width=\"70\" height=\"70\"\n            onmouseover=\"this.src='../../assets/img/kontak/github-hover.png'\"\n            onmouseout=\"this.src='../../assets/img/kontak/github.png'\">\n        </a>\n        <a class=\"navbar-brand mr-5 ml-5\" href=\"mailto:riefky.saputro@gmail.com\">\n            <img src=\"../../assets/img/kontak/gmail.png\" width=\"70\" height=\"70\"\n            onmouseover=\"this.src='../../assets/img/kontak/gmail-hover.png'\"\n            onmouseout=\"this.src='../../assets/img/kontak/gmail.png'\">\n        </a>\n    </nav>\n</div>\n    "
 
 /***/ }),
 
