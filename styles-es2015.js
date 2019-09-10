@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\programbayu\xampp56\htdocs\angular\myportofolio\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! D:\programbayu\xampp56\htdocs\angular\myportofolio\src\assets\bootstrap\css\bootstrap.min.css */"./src/assets/bootstrap/css/bootstrap.min.css");
+__webpack_require__(/*! D:\ProgramBayu\xampp56\htdocs\angular\myportofolio\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! D:\ProgramBayu\xampp56\htdocs\angular\myportofolio\src\assets\bootstrap\css\bootstrap.min.css */"./src/assets/bootstrap/css/bootstrap.min.css");
 
 
 /***/ })
